@@ -41,9 +41,9 @@ export const Services: React.FC = () => {
             <span>Services & Solutions</span>
           </div>
           <h2 
-            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight drop-shadow-[0_0_15px_rgba(124,58,237,0.3)] dark:drop-shadow-[0_0_15px_rgba(124,58,237,0.5)]"
+            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight"
             style={{
-              background: "linear-gradient(90deg, #2563EB 0%, #06B6D4 25%, #7C3AED 50%, #A855F7 75%, #EC4899 100%)",
+              backgroundImage: "linear-gradient(90deg, #2563EB 0%, #06B6D4 25%, #7C3AED 50%, #A855F7 75%, #EC4899 100%)",
               WebkitBackgroundClip: "text",
               backgroundClip: "text",
               WebkitTextFillColor: "transparent",
