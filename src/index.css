@@ -242,6 +242,48 @@ button:active, a:active {
   box-shadow: 0 0 30px var(--accent-glow);
 }
 
+.hero-name-gradient {
+  background: linear-gradient(
+    90deg,
+    #2563EB,
+    #06B6D4,
+    #7C3AED,
+    #EC4899,
+    #F59E0B
+  );
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: hero-gradient-shift 8s ease infinite alternate;
+  filter: drop-shadow(0 0 12px rgba(124, 58, 237, 0.2));
+}
+
+.dark .hero-name-gradient {
+  background: linear-gradient(
+    90deg,
+    #3B82F6,
+    #22D3EE,
+    #A78BFA,
+    #F472B6,
+    #FBBF24
+  );
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 20px rgba(124, 58, 237, 0.4));
+}
+
+@keyframes hero-gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
 /* Accessible focus ring */
 *:focus-visible {
   outline: 2px solid var(--accent-primary);
