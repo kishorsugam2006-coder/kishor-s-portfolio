@@ -105,6 +105,7 @@ export const Navbar: React.FC = () => {
           </button>{" "}
           <a
             href="/assets/resume/Kishor_S_Resume.pdf"
+            download="Kishor_S_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl bg-blue-600 hover:bg-blue-500 text-white dark:bg-blue-600 dark:hover:bg-blue-500 dark:text-white transition-all active:scale-95 shadow-sm"
@@ -147,6 +148,7 @@ export const Navbar: React.FC = () => {
             ))}{" "}
             <a
               href="/assets/resume/Kishor_S_Resume.pdf"
+              download="Kishor_S_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMobileMenuOpen(false)}

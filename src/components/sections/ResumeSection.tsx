@@ -46,6 +46,7 @@ export const ResumeSection: React.FC = () => {
             {" "}
             <Button
               href={personalInfo.resumeUrl}
+              download="Kishor_S_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               variant="primary"
@@ -56,7 +57,9 @@ export const ResumeSection: React.FC = () => {
               Download Resume (PDF){" "}
             </Button>{" "}
             <Button
-              onClick={() => window.open(personalInfo.resumeUrl, "_blank")}
+              href="/resume-print"
+              target="_blank"
+              rel="noopener noreferrer"
               variant="outline"
               size="md"
               icon={<Printer className="w-4 h-4" />}

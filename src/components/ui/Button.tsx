@@ -8,6 +8,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   href?: string;
   target?: string;
   rel?: string;
+  download?: string | boolean;
 }
 export const Button: React.FC<ButtonProps> = ({
   variant = "primary",
@@ -19,6 +20,7 @@ export const Button: React.FC<ButtonProps> = ({
   href,
   target,
   rel,
+  download,
   "aria-label": ariaLabel,
   title,
   ...props
@@ -45,6 +47,7 @@ export const Button: React.FC<ButtonProps> = ({
         href={href}
         target={target}
         rel={rel}
+        download={download}
         aria-label={ariaLabel}
         title={title}
         className={combinedClasses}

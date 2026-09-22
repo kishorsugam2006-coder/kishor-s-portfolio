@@ -89,6 +89,7 @@ export const Hero: React.FC = () => {
               </Button>{" "}
               <Button
                 href={personalInfo.resumeUrl}
+                download="Kishor_S_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 variant="outline"
