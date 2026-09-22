@@ -78,13 +78,9 @@ export const Experience: React.FC = () => {
                   </div>{" "}
                   {/* Experience Card */}{" "}
                   <div
-                    className={`w-full group glass-panel card-glow p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-800/80 transition-all shadow-md space-y-4 relative z-10 overflow-hidden ${experience.length === 1 ? "lg:h-full" : "sm:w-[calc(50%-2.5rem)]"}`}
+                    className={`w-full group p-6 sm:p-8 rounded-3xl border border-indigo-500/10 transition-all shadow-sm hover:shadow-md space-y-4 relative z-10 overflow-hidden ${experience.length === 1 ? "lg:h-full" : "sm:w-[calc(50%-2.5rem)]"}`}
+                    style={{ background: "linear-gradient(135deg, #DDF3FF 0%, #E5E8FF 45%, #F5DFF0 100%)" }}
                   >
-                    {" "}
-                    <div 
-                      className="absolute inset-0 pointer-events-none transition-opacity duration-500 opacity-90 group-hover:opacity-100 -z-10"
-                      style={{ background: getExperienceGlowStyle('main') }}
-                    />
                     {/* Header */}{" "}
                     <div className="space-y-1">
                       {" "}
