@@ -78,33 +78,32 @@ export const Experience: React.FC = () => {
                   </div>{" "}
                   {/* Experience Card */}{" "}
                   <div
-                    className={`w-full group p-6 sm:p-8 rounded-3xl border border-indigo-500/10 transition-all shadow-sm hover:shadow-md space-y-4 relative z-10 overflow-hidden ${experience.length === 1 ? "lg:h-full" : "sm:w-[calc(50%-2.5rem)]"}`}
-                    style={{ background: "linear-gradient(135deg, #DDF3FF 0%, #E5E8FF 45%, #F5DFF0 100%)" }}
+                    className={`w-full group p-6 sm:p-8 rounded-3xl border border-indigo-500/10 transition-all shadow-sm hover:shadow-md space-y-4 relative z-10 overflow-hidden ${experience.length === 1 ? "lg:h-full" : "sm:w-[calc(50%-2.5rem)]"} bg-[linear-gradient(135deg,#DDF3FF_0%,#E5E8FF_45%,#F5DFF0_100%)] dark:bg-[linear-gradient(135deg,#111827_0%,#172554_45%,#312E81_100%)]`}
                   >
                     {/* Header */}{" "}
                     <div className="space-y-1">
                       {" "}
-                      <div className="text-xs font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400">
+                      <div className="text-xs font-bold uppercase tracking-wider text-sky-600 dark:text-cyan-400">
                         Professional Experience
                       </div>{" "}
                       <div className="flex items-center justify-between flex-wrap gap-2">
                         {" "}
-                        <span className="text-xs font-bold text-sky-600 dark:text-sky-400 flex items-center gap-1.5">
+                        <span className="text-xs font-bold text-sky-600 dark:text-cyan-400 flex items-center gap-1.5">
                           {" "}
                           <Calendar className="w-3.5 h-3.5" />{" "}
                           <span>{item.period}</span>{" "}
                         </span>{" "}
-                        <Badge variant="neutral" size="sm">
+                        <Badge variant="neutral" size="sm" className="dark:bg-slate-900/45 dark:border-slate-400/25 dark:text-slate-200">
                           {item.type}
                         </Badge>{" "}
                       </div>{" "}
-                      <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100">
+                      <h3 className="text-xl font-bold text-slate-900 dark:text-slate-50">
                         {" "}
                         {item.role}{" "}
                       </h3>{" "}
-                      <div className="flex items-center gap-2 text-slate-600 dark:text-slate-400 text-sm font-semibold">
+                      <div className="flex items-center gap-2 text-slate-600 dark:text-slate-300 text-sm font-semibold">
                         {" "}
-                        <span>{item.company}</span>{" "}
+                        <span className="dark:text-slate-200">{item.company}</span>{" "}
                         {item.companyUrl && (
                           <a
                             href={item.companyUrl}
@@ -117,9 +116,9 @@ export const Experience: React.FC = () => {
                           </a>
                         )}{" "}
                         <span>•</span>{" "}
-                        <span className="flex items-center gap-1 text-xs font-normal">
+                        <span className="flex items-center gap-1 text-xs font-normal dark:text-slate-300">
                           {" "}
-                          <MapPin className="w-3 h-3 text-slate-400" />{" "}
+                          <MapPin className="w-3 h-3 text-slate-400 dark:text-slate-300" />{" "}
                           {item.location}{" "}
                         </span>{" "}
                       </div>{" "}
@@ -130,7 +129,7 @@ export const Experience: React.FC = () => {
                       {item.description.map((desc, dIdx) => (
                         <li key={dIdx} className="flex items-start gap-2">
                           {" "}
-                          <span className="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 shrink-0" />{" "}
+                          <span className="w-1.5 h-1.5 rounded-full bg-sky-500 dark:bg-cyan-400 mt-2 shrink-0" />{" "}
                           <span>{desc}</span>{" "}
                         </li>
                       ))}{" "}
@@ -149,7 +148,7 @@ export const Experience: React.FC = () => {
                             className="flex items-center gap-2 text-xs text-slate-700 dark:text-slate-300"
                           >
                             {" "}
-                            <CheckCircle className="w-3.5 h-3.5 text-emerald-500 shrink-0" />{" "}
+                            <CheckCircle className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400 shrink-0" />{" "}
                             <span>{ach}</span>{" "}
                           </div>
                         ))}{" "}
@@ -159,7 +158,7 @@ export const Experience: React.FC = () => {
                     <div className="flex flex-wrap gap-1.5 pt-2">
                       {" "}
                       {item.technologies.map((tech, tIdx) => (
-                        <Badge key={tIdx} variant="neutral" size="sm">
+                        <Badge key={tIdx} variant="neutral" size="sm" className="dark:bg-slate-900/45 dark:border-slate-400/25 dark:text-slate-200">
                           {" "}
                           {tech}{" "}
                         </Badge>
