@@ -161,9 +161,35 @@ section h2 {
   -webkit-text-fill-color: transparent;
 }
 
+section h2.about-heading-gradient {
+  background: linear-gradient(
+    90deg,
+    #334155 0%,
+    #3B82F6 30%,
+    #8B5CF6 70%,
+    #D97706 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .dark section h2 {
   /* Gold gradient for dark theme */
   background: linear-gradient(90deg, #ffffff 0%, #f5d77a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dark section h2.about-heading-gradient {
+  background: linear-gradient(
+    90deg,
+    #F8FAFC 0%,
+    #7DD3FC 30%,
+    #C084FC 70%,
+    #FDE047 100%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

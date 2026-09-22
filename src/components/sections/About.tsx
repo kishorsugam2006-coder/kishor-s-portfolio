@@ -50,7 +50,7 @@ export const About: React.FC = () => {
             </span>{" "}
             <span>About Kishor</span>{" "}
           </div>{" "}
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight about-heading-gradient">
             {" "}
             Background & Work Philosophy{" "}
           </h2>{" "}
