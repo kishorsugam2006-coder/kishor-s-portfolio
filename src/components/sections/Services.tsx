@@ -40,7 +40,7 @@ export const Services: React.FC = () => {
             <Layers className="w-3.5 h-3.5" />
             <span>Services & Solutions</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-violet-600 to-purple-600 dark:from-blue-400 dark:via-violet-400 dark:to-purple-400 tracking-tight drop-shadow-[0_0_15px_rgba(139,92,246,0.3)] dark:drop-shadow-[0_0_15px_rgba(139,92,246,0.5)]">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-transparent bg-clip-text bg-[linear-gradient(90deg,#2563EB,#06B6D4,#7C3AED,#A855F7,#EC4899)] tracking-tight drop-shadow-[0_0_15px_rgba(124,58,237,0.3)] dark:drop-shadow-[0_0_15px_rgba(124,58,237,0.5)]">
             How I Can Help Your Team
           </h2>
           <p className="mt-4 text-slate-600 dark:text-slate-400 max-w-2xl text-base">
