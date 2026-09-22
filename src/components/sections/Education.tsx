@@ -5,12 +5,12 @@ import { Badge } from "../ui/Badge";
 export const Education: React.FC = () => {
   const getEducationGlowStyle = (idx: number) => {
     const glows = [
-      // CARD 1: Blue + Cyan + Violet
-      "linear-gradient(135deg, rgba(59,130,246,0.18) 0%, rgba(139,92,246,0.14) 100%), radial-gradient(circle at 0% 0%, rgba(6,182,212,0.3) 0%, transparent 80%), radial-gradient(circle at 100% 100%, rgba(139,92,246,0.3) 0%, transparent 80%)",
-      // CARD 2: Violet + Pink + Blue
-      "linear-gradient(135deg, rgba(139,92,246,0.18) 0%, rgba(236,72,153,0.14) 100%), radial-gradient(circle at 0% 0%, rgba(139,92,246,0.3) 0%, transparent 80%), radial-gradient(circle at 100% 100%, rgba(59,130,246,0.3) 0%, transparent 80%)",
-      // CARD 3: Cyan + Blue + Soft Amber/Purple
-      "linear-gradient(135deg, rgba(6,182,212,0.18) 0%, rgba(59,130,246,0.14) 100%), radial-gradient(circle at 0% 0%, rgba(245,158,11,0.2) 0%, transparent 80%), radial-gradient(circle at 100% 100%, rgba(139,92,246,0.3) 0%, transparent 80%)"
+      // CARD 1: soft cyan/blue + lavender
+      "linear-gradient(135deg, rgba(6,182,212,0.20) 0%, rgba(59,130,246,0.18) 50%, rgba(139,92,246,0.16) 100%)",
+      // CARD 2: lavender/purple + soft pink
+      "linear-gradient(135deg, rgba(139,92,246,0.20) 0%, rgba(168,85,247,0.18) 50%, rgba(236,72,153,0.16) 100%)",
+      // CARD 3: mint/green + cyan/blue
+      "linear-gradient(135deg, rgba(16,185,129,0.16) 0%, rgba(6,182,212,0.18) 50%, rgba(59,130,246,0.16) 100%)"
     ];
     return glows[idx % glows.length];
   };
@@ -50,7 +50,7 @@ export const Education: React.FC = () => {
             >
               {" "}
               <div 
-                className="absolute inset-0 pointer-events-none transition-opacity duration-500 opacity-90 group-hover:opacity-100 -z-10"
+                className="absolute inset-0 pointer-events-none transition-opacity duration-500 opacity-90 group-hover:opacity-100"
                 style={{ background: getEducationGlowStyle(idx) }}
               />
               <div className="relative z-10 space-y-4">
