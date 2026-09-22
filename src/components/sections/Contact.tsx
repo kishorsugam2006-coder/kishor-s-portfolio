@@ -97,7 +97,17 @@ export const Contact: React.FC = () => {
             <Mail className="w-3.5 h-3.5" />
             <span>Let's Connect</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-slate-100 tracking-tight">
+          <h2
+            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight"
+            style={{
+              background:
+                "linear-gradient(90deg, #2563EB 0%, #06B6D4 25%, #7C3AED 50%, #A855F7 75%, #EC4899 100%)",
+              WebkitBackgroundClip: "text",
+              backgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              color: "transparent",
+            }}
+          >
             Get In Touch
           </h2>
           <p className="mt-4 text-slate-600 dark:text-slate-400 max-w-2xl text-base">
