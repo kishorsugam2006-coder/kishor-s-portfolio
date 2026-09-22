@@ -95,11 +95,10 @@ export const Projects: React.FC = () => {
                   {" "}
                   <Button
                     onClick={() => setSelectedProject(project)}
-                    variant="ghost"
+                    variant="projectDetails"
                     size="sm"
                     icon={<ArrowRight className="w-4 h-4" />}
                     iconPosition="right"
-                    className="text-blue-600 dark:text-cyan-400 font-semibold hover:bg-[rgba(var(--hover-rgb),0.10)]"
                   >
                     {" "}
                     View Details{" "}
