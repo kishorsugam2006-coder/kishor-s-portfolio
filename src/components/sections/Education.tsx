@@ -47,12 +47,9 @@ export const Education: React.FC = () => {
             <div
               key={edu.id}
               className="glass-panel card-glow relative overflow-hidden p-8 rounded-3xl border border-slate-200 dark:border-slate-800/80 transition-all flex flex-col justify-between group shadow-md space-y-6"
+              style={{ background: getEducationGlowStyle(idx) }}
             >
               {" "}
-              <div 
-                className="absolute inset-0 pointer-events-none transition-opacity duration-500 opacity-90 group-hover:opacity-100"
-                style={{ background: getEducationGlowStyle(idx) }}
-              />
               <div className="relative z-10 space-y-4">
                 {" "}
                 <div className="w-12 h-12 rounded-2xl bg-blue-500/10 text-blue-500 flex items-center justify-center group-hover:scale-105 transition-transform">
