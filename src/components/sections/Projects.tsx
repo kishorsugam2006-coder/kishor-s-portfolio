@@ -24,7 +24,7 @@ export const Projects: React.FC = () => {
             </span>{" "}
             <span>Featured Portfolio</span>{" "}
           </div>{" "}
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight projects-heading-gradient">
             {" "}
             Key Projects & Case Studies{" "}
           </h2>{" "}
