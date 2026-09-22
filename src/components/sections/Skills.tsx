@@ -42,6 +42,21 @@ export const Skills: React.FC = () => {
     }
     return "neutral";
   };
+  const getSkillGlowStyle = (skillName: string) => {
+    const glows: Record<string, string> = {
+      java: "radial-gradient(circle at 0% 0%, rgba(59,130,246,0.2) 0%, transparent 75%), radial-gradient(circle at 100% 100%, rgba(139,92,246,0.2) 0%, transparent 75%)",
+      python: "radial-gradient(circle at 0% 0%, rgba(139,92,246,0.2) 0%, transparent 75%), radial-gradient(circle at 100% 100%, rgba(6,182,212,0.2) 0%, transparent 75%)",
+      html: "radial-gradient(circle at 0% 0%, rgba(6,182,212,0.2) 0%, transparent 75%), radial-gradient(circle at 100% 100%, rgba(59,130,246,0.2) 0%, transparent 75%)",
+      css: "radial-gradient(circle at 0% 0%, rgba(59,130,246,0.2) 0%, transparent 75%), radial-gradient(circle at 100% 100%, rgba(139,92,246,0.2) 0%, transparent 75%)",
+      javascript: "radial-gradient(circle at 0% 0%, rgba(6,182,212,0.2) 0%, transparent 75%), radial-gradient(circle at 100% 100%, rgba(59,130,246,0.2) 0%, transparent 75%)",
+      firebase: "radial-gradient(circle at 0% 0%, rgba(16,185,129,0.2) 0%, transparent 75%), radial-gradient(circle at 100% 100%, rgba(6,182,212,0.2) 0%, transparent 75%)",
+      figma: "radial-gradient(circle at 0% 0%, rgba(168,85,247,0.2) 0%, transparent 75%), radial-gradient(circle at 100% 100%, rgba(236,72,153,0.2) 0%, transparent 75%)",
+      canva: "radial-gradient(circle at 0% 0%, rgba(168,85,247,0.2) 0%, transparent 75%), radial-gradient(circle at 100% 100%, rgba(59,130,246,0.2) 0%, transparent 75%)",
+      antigravity: "radial-gradient(circle at 0% 0%, rgba(139,92,246,0.2) 0%, transparent 75%), radial-gradient(circle at 100% 100%, rgba(236,72,153,0.2) 0%, transparent 75%)",
+      stitch: "radial-gradient(circle at 0% 0%, rgba(59,130,246,0.2) 0%, transparent 60%), radial-gradient(circle at 100% 100%, rgba(6,182,212,0.2) 0%, transparent 60%), radial-gradient(circle at 50% 50%, rgba(139,92,246,0.15) 0%, transparent 60%)"
+    };
+    return glows[skillName.toLowerCase()] || "radial-gradient(circle at 50% 50%, rgba(148,163,184,0.1) 0%, transparent 75%)";
+  };
   return (
     <section
       id="skills"
@@ -105,10 +120,15 @@ export const Skills: React.FC = () => {
             {filteredSkills.map((skill, idx) => (
               <div
                 key={idx}
-                className="glass-panel p-5 rounded-2xl border border-slate-200 dark:border-slate-800/80 transition-all flex items-center justify-between group shadow-sm"
+                className="glass-panel relative p-5 rounded-2xl border border-slate-200 dark:border-slate-800/80 transition-all flex items-center justify-between group shadow-sm overflow-hidden"
               >
-                {" "}
-                <div className="flex items-center gap-3">
+                {/* Subtle Ambient Glow Layer */}
+                <div 
+                  className="absolute inset-0 pointer-events-none transition-opacity duration-500 opacity-60 group-hover:opacity-100"
+                  style={{ background: getSkillGlowStyle(skill.name) }}
+                />
+                
+                <div className="relative z-10 flex items-center gap-3">
                   {" "}
                   <div className="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 group-hover:scale-105 transition-transform">
                     {" "}
@@ -126,10 +146,12 @@ export const Skills: React.FC = () => {
                     </span>{" "}
                   </div>{" "}
                 </div>{" "}
-                <Badge variant={getLevelVariant(skill.level)} size="sm">
-                  {" "}
-                  {skill.level}{" "}
-                </Badge>{" "}
+                <div className="relative z-10">
+                  <Badge variant={getLevelVariant(skill.level)} size="sm">
+                    {" "}
+                    {skill.level}{" "}
+                  </Badge>{" "}
+                </div>
               </div>
             ))}{" "}
           </div>
