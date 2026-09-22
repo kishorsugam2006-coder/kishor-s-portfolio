@@ -591,3 +591,30 @@ section h2.experience-heading-gradient {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+section h2.education-heading-gradient {
+  background: linear-gradient(
+    90deg,
+    #1E3A8A 0%,
+    #2563EB 25%,
+    #8B5CF6 50%,
+    #A21CAF 75%,
+    #D946EF 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dark section h2.education-heading-gradient {
+  background: linear-gradient(
+    90deg,
+    #3B82F6 0%,
+    #60A5FA 25%,
+    #A78BFA 50%,
+    #C084FC 75%,
+    #E879F9 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

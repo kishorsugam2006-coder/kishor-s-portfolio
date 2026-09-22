@@ -3,6 +3,18 @@ import { GraduationCap, Calendar, Award } from "lucide-react";
 import { education } from "../../data/portfolioData";
 import { Badge } from "../ui/Badge";
 export const Education: React.FC = () => {
+  const getEducationGlowStyle = (idx: number) => {
+    const glows = [
+      // CARD 1: Blue + Cyan + Violet
+      "linear-gradient(135deg, rgba(59,130,246,0.18) 0%, rgba(139,92,246,0.14) 100%), radial-gradient(circle at 0% 0%, rgba(6,182,212,0.3) 0%, transparent 80%), radial-gradient(circle at 100% 100%, rgba(139,92,246,0.3) 0%, transparent 80%)",
+      // CARD 2: Violet + Pink + Blue
+      "linear-gradient(135deg, rgba(139,92,246,0.18) 0%, rgba(236,72,153,0.14) 100%), radial-gradient(circle at 0% 0%, rgba(139,92,246,0.3) 0%, transparent 80%), radial-gradient(circle at 100% 100%, rgba(59,130,246,0.3) 0%, transparent 80%)",
+      // CARD 3: Cyan + Blue + Soft Amber/Purple
+      "linear-gradient(135deg, rgba(6,182,212,0.18) 0%, rgba(59,130,246,0.14) 100%), radial-gradient(circle at 0% 0%, rgba(245,158,11,0.2) 0%, transparent 80%), radial-gradient(circle at 100% 100%, rgba(139,92,246,0.3) 0%, transparent 80%)"
+    ];
+    return glows[idx % glows.length];
+  };
+
   return (
     <section id="education" className="py-20 md:py-28 relative">
       {" "}
@@ -19,7 +31,7 @@ export const Education: React.FC = () => {
             </span>{" "}
             <span>Academic Background</span>{" "}
           </div>{" "}
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight education-heading-gradient">
             {" "}
             Education Journey{" "}
           </h2>{" "}
@@ -31,13 +43,17 @@ export const Education: React.FC = () => {
         {/* Education Cards Grid */}{" "}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {" "}
-          {education.map((edu) => (
+          {education.map((edu, idx) => (
             <div
               key={edu.id}
-              className="glass-panel card-glow p-8 rounded-3xl border border-slate-200 dark:border-slate-800/80 transition-all flex flex-col justify-between group shadow-md space-y-6"
+              className="glass-panel card-glow relative overflow-hidden p-8 rounded-3xl border border-slate-200 dark:border-slate-800/80 transition-all flex flex-col justify-between group shadow-md space-y-6"
             >
               {" "}
-              <div className="space-y-4">
+              <div 
+                className="absolute inset-0 pointer-events-none transition-opacity duration-500 opacity-90 group-hover:opacity-100 -z-10"
+                style={{ background: getEducationGlowStyle(idx) }}
+              />
+              <div className="relative z-10 space-y-4">
                 {" "}
                 <div className="w-12 h-12 rounded-2xl bg-blue-500/10 text-blue-500 flex items-center justify-center group-hover:scale-105 transition-transform">
                   {" "}
@@ -59,7 +75,7 @@ export const Education: React.FC = () => {
                   {edu.institution}{" "}
                 </p>{" "}
               </div>{" "}
-              <div className="pt-4 border-t border-slate-200 dark:border-slate-800/80 flex items-center justify-between">
+              <div className="relative z-10 pt-4 border-t border-slate-200 dark:border-slate-800/80 flex items-center justify-between">
                 {" "}
                 <Badge variant="primary" size="md">
                   {" "}
