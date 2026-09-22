@@ -564,3 +564,30 @@ button:active, a:active {
 }
 
 
+section h2.experience-heading-gradient {
+  background: linear-gradient(
+    90deg,
+    #1E3A8A 0%,
+    #2563EB 25%,
+    #8B5CF6 50%,
+    #D946EF 75%,
+    #06B6D4 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dark section h2.experience-heading-gradient {
+  background: linear-gradient(
+    90deg,
+    #3B82F6 0%,
+    #60A5FA 25%,
+    #A78BFA 50%,
+    #E879F9 75%,
+    #22D3EE 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

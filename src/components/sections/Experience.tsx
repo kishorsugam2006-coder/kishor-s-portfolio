@@ -40,7 +40,7 @@ export const Experience: React.FC = () => {
             </span>{" "}
             <span>Career History</span>{" "}
           </div>{" "}
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight experience-heading-gradient">
             {" "}
             Professional Experience{" "}
           </h2>{" "}
