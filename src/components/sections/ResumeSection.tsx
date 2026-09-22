@@ -32,7 +32,17 @@ export const ResumeSection: React.FC = () => {
             <FileText className="w-3.5 h-3.5" />{" "}
             <span>Curriculum Vitae</span>{" "}
           </div>{" "}
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-slate-100 tracking-tight">
+          <h2
+            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight"
+            style={{
+              background:
+                "linear-gradient(90deg, #2563EB 0%, #06B6D4 25%, #7C3AED 50%, #A855F7 75%, #EC4899 100%)",
+              WebkitBackgroundClip: "text",
+              backgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              color: "transparent",
+            }}
+          >
             {" "}
             Interactive Resume{" "}
           </h2>{" "}
