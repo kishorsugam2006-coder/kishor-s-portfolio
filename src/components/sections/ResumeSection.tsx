@@ -70,30 +70,31 @@ export const ResumeSection: React.FC = () => {
           </div>{" "}
         </div>{" "}
         {/* CV Preview Box */}{" "}
-        <div className="max-w-4xl mx-auto glass-panel rounded-3xl border border-slate-200 dark:border-slate-800 shadow-2xl overflow-hidden">
+        {/* CV Preview Box */}{" "}
+        <div className="max-w-4xl mx-auto rounded-3xl border border-[rgba(99,102,241,0.15)] shadow-[0_10px_30px_rgba(99,102,241,0.1)] hover:shadow-[0_15px_40px_rgba(99,102,241,0.2)] overflow-hidden transition-all duration-300 hover:-translate-y-1 !bg-[linear-gradient(135deg,#D9EEFF_0%,#E4E4FF_35%,#EBDDFB_70%,#F7DDEB_100%)] hover:!bg-[linear-gradient(135deg,#cbe4ff_0%,#dadcfc_35%,#e2ceff_70%,#fad2eb_100%)]">
           {" "}
           {/* Top Bar with Tabs */}{" "}
-          <div className="flex items-center justify-between px-6 py-4 border-b border-slate-200 dark:border-slate-800/80 bg-slate-100/50 dark:bg-slate-900/50 flex-wrap gap-4">
+          <div className="flex items-center justify-between px-6 py-4 border-b border-white/30 bg-white/20 flex-wrap gap-4">
             {" "}
             <div className="flex items-center gap-2">
               {" "}
-              <div className="w-3 h-3 rounded-full bg-rose-500" />{" "}
-              <div className="w-3 h-3 rounded-full bg-amber-500" />{" "}
-              <div className="w-3 h-3 rounded-full bg-emerald-500" />{" "}
-              <span className="text-xs text-slate-400 font-mono ml-2 hidden sm:inline">
+              <div className="w-3 h-3 rounded-full bg-rose-400 shadow-sm" />{" "}
+              <div className="w-3 h-3 rounded-full bg-amber-400 shadow-sm" />{" "}
+              <div className="w-3 h-3 rounded-full bg-emerald-400 shadow-sm" />{" "}
+              <span className="text-xs !text-[#334155] font-mono ml-2 hidden sm:inline opacity-80">
                 {" "}
                 Kishor_S_Resume.pdf{" "}
               </span>{" "}
             </div>{" "}
             {/* Nav Tabs */}{" "}
-            <div className="flex items-center gap-1 bg-slate-200/80 dark:bg-slate-800/80 p-1 rounded-xl">
+            <div className="flex items-center gap-1 bg-white/40 shadow-sm border border-white/20 p-1 rounded-xl">
               {" "}
               {(["summary", "experience", "skills", "education"] as const).map(
                 (tab) => (
                   <button
                     key={tab}
                     onClick={() => setActiveTab(tab)}
-                    className={`px-3 py-1.5 text-xs font-bold capitalize rounded-lg transition-all ${activeTab === tab ? "bg-white dark:bg-slate-900 text-blue-600 dark:text-cyan-400 shadow-sm" : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200"}`}
+                    className={`px-3 py-1.5 text-xs font-bold capitalize rounded-lg transition-all ${activeTab === tab ? "!bg-[linear-gradient(90deg,#D9EEFF,#EBDDFB)] border border-white/60 !text-[#2563EB] shadow-sm" : "!text-[#334155] hover:!text-[#172033] hover:bg-white/30"}`}
                   >
                     {" "}
                     {tab}{" "}
@@ -108,15 +109,15 @@ export const ResumeSection: React.FC = () => {
             {activeTab === "summary" && (
               <div className="space-y-6">
                 {" "}
-                <div className="border-b border-slate-200 dark:border-slate-800 pb-6">
+                <div className="border-b border-white/40 pb-6">
                   {" "}
-                  <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-100">
+                  <h3 className="text-2xl font-bold !text-[#172033]">
                     {personalInfo.name}
                   </h3>{" "}
-                  <div className="text-sm font-semibold text-blue-600 dark:text-cyan-400 mt-1">
+                  <div className="text-sm font-semibold !text-[#2563EB] mt-1">
                     {personalInfo.title}
                   </div>{" "}
-                  <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                  <div className="text-xs !text-[#334155] mt-1 opacity-90">
                     {" "}
                     {personalInfo.location} • {personalInfo.email} •{" "}
                     {personalInfo.phone}{" "}
@@ -124,10 +125,10 @@ export const ResumeSection: React.FC = () => {
                 </div>{" "}
                 <div className="space-y-3">
                   {" "}
-                  <h4 className="text-sm font-bold text-slate-400 uppercase tracking-wider">
+                  <h4 className="text-sm font-bold !text-[#1E3A5F] uppercase tracking-wider">
                     Professional Profile
                   </h4>{" "}
-                  <p className="text-sm sm:text-base text-slate-700 dark:text-slate-300 leading-relaxed">
+                  <p className="text-sm sm:text-base !text-[#334155] leading-relaxed">
                     {" "}
                     Motivated and adaptable Aspiring IT Professional skilled in
                     web design, software development, programming, frontend
@@ -142,33 +143,33 @@ export const ResumeSection: React.FC = () => {
             {activeTab === "experience" && (
               <div className="space-y-6">
                 {" "}
-                <h4 className="text-sm font-bold text-slate-400 uppercase tracking-wider">
+                <h4 className="text-sm font-bold !text-[#1E3A5F] uppercase tracking-wider">
                   Internship Experience
                 </h4>{" "}
                 {experience.map((exp) => (
                   <div
                     key={exp.id}
-                    className="space-y-2 border-b border-slate-200 dark:border-slate-800/80 pb-6 last:border-0"
+                    className="space-y-2 border-b border-white/40 pb-6 last:border-0"
                   >
                     {" "}
                     <div className="flex items-center justify-between flex-wrap gap-2">
                       {" "}
-                      <h5 className="font-bold text-slate-900 dark:text-slate-100 text-base">
+                      <h5 className="font-bold !text-[#172033] text-base">
                         {exp.role}
                       </h5>{" "}
-                      <span className="text-xs font-semibold text-blue-600 dark:text-cyan-400">
+                      <span className="text-xs font-semibold !text-[#2563EB]">
                         {exp.period}
                       </span>{" "}
                     </div>{" "}
-                    <div className="text-xs font-semibold text-slate-600 dark:text-slate-400">
+                    <div className="text-xs font-semibold !text-[#334155] opacity-90">
                       {exp.company} • {exp.location}
                     </div>{" "}
-                    <ul className="space-y-1 text-xs sm:text-sm text-slate-600 dark:text-slate-300 pt-2">
+                    <ul className="space-y-1 text-xs sm:text-sm !text-[#334155] pt-2">
                       {" "}
                       {exp.description.map((item, idx) => (
                         <li key={idx} className="flex items-start gap-2">
                           {" "}
-                          <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 shrink-0" />{" "}
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] mt-2 shrink-0 opacity-70" />{" "}
                           <span>{item}</span>{" "}
                         </li>
                       ))}{" "}
@@ -180,7 +181,7 @@ export const ResumeSection: React.FC = () => {
             {activeTab === "skills" && (
               <div className="space-y-6">
                 {" "}
-                <h4 className="text-sm font-bold text-slate-400 uppercase tracking-wider">
+                <h4 className="text-sm font-bold !text-[#1E3A5F] uppercase tracking-wider">
                   Technical Skills & Achievements
                 </h4>{" "}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -188,30 +189,30 @@ export const ResumeSection: React.FC = () => {
                   {skills.map((skill, idx) => (
                     <div
                       key={idx}
-                      className="p-3 rounded-xl bg-slate-100 dark:bg-slate-800/60 flex items-center justify-between"
+                      className="p-3 rounded-xl bg-white/30 border border-white/40 flex items-center justify-between"
                     >
                       {" "}
-                      <span className="font-bold text-xs sm:text-sm text-slate-800 dark:text-slate-200">
+                      <span className="font-bold text-xs sm:text-sm !text-[#172033]">
                         {skill.name}
                       </span>{" "}
-                      <span className="text-xs text-blue-600 dark:text-cyan-400 font-semibold">
+                      <span className="text-xs !text-[#2563EB] font-semibold">
                         {skill.level}
                       </span>{" "}
                     </div>
                   ))}{" "}
                 </div>{" "}
-                <div className="pt-4 border-t border-slate-200 dark:border-slate-800">
+                <div className="pt-4 border-t border-white/40">
                   {" "}
-                  <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">
+                  <h4 className="text-xs font-bold !text-[#1E3A5F] uppercase tracking-wider mb-3">
                     Honors
                   </h4>{" "}
                   {achievements.map((ach) => (
                     <div
                       key={ach.id}
-                      className="p-3 rounded-xl bg-amber-500/10 border border-amber-500/20 text-xs sm:text-sm font-medium text-slate-800 dark:text-slate-200"
+                      className="p-3 rounded-xl bg-white/40 border border-white/50 text-xs sm:text-sm font-medium !text-[#334155] mb-2"
                     >
                       {" "}
-                      <strong>{ach.title}</strong> — {ach.organization}{" "}
+                      <strong className="!text-[#172033]">{ach.title}</strong> — {ach.organization}{" "}
                     </div>
                   ))}{" "}
                 </div>{" "}
@@ -220,7 +221,7 @@ export const ResumeSection: React.FC = () => {
             {activeTab === "education" && (
               <div className="space-y-6">
                 {" "}
-                <h4 className="text-sm font-bold text-slate-400 uppercase tracking-wider">
+                <h4 className="text-sm font-bold !text-[#1E3A5F] uppercase tracking-wider">
                   Education & Certifications
                 </h4>{" "}
                 <div className="space-y-4">
@@ -228,15 +229,15 @@ export const ResumeSection: React.FC = () => {
                   {education.map((edu) => (
                     <div
                       key={edu.id}
-                      className="p-4 rounded-2xl bg-slate-100 dark:bg-slate-800/60 space-y-1"
+                      className="p-4 rounded-2xl bg-white/30 border border-white/40 space-y-1"
                     >
                       {" "}
-                      <div className="flex items-center gap-2 font-bold text-slate-900 dark:text-slate-100 text-sm">
+                      <div className="flex items-center gap-2 font-bold !text-[#172033] text-sm">
                         {" "}
-                        <GraduationCap className="w-4 h-4 text-blue-500" />{" "}
+                        <GraduationCap className="w-4 h-4 text-[#2563EB]" />{" "}
                         <span>{edu.degree}</span>{" "}
                       </div>{" "}
-                      <div className="text-xs text-slate-500 dark:text-slate-400">
+                      <div className="text-xs !text-[#334155] opacity-90">
                         {edu.institution} • {edu.periodOrYear} (
                         {edu.scoreOrStatus})
                       </div>{" "}
@@ -245,12 +246,12 @@ export const ResumeSection: React.FC = () => {
                   {certifications.map((cert) => (
                     <div
                       key={cert.id}
-                      className="p-4 rounded-2xl bg-slate-100 dark:bg-slate-800/60 space-y-1"
+                      className="p-4 rounded-2xl bg-white/30 border border-white/40 space-y-1"
                     >
                       {" "}
-                      <div className="flex items-center gap-2 font-bold text-slate-900 dark:text-slate-100 text-sm">
+                      <div className="flex items-center gap-2 font-bold !text-[#172033] text-sm">
                         {" "}
-                        <Award className="w-4 h-4 text-amber-500" />{" "}
+                        <Award className="w-4 h-4 text-[#6D28D9]" />{" "}
                         <span>{cert.title}</span>{" "}
                       </div>{" "}
                     </div>
