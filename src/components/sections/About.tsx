@@ -165,7 +165,7 @@ export const About: React.FC = () => {
         {/* Soft Skill Pillars */}{" "}
         <div className="space-y-6">
           {" "}
-          <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-100 text-center mb-8">
+          <h3 className="text-2xl font-bold text-center mb-8 strengths-heading-gradient">
             {" "}
             Personal Strengths & Mindset{" "}
           </h3>{" "}
