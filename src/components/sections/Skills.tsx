@@ -44,18 +44,18 @@ export const Skills: React.FC = () => {
   };
   const getSkillGlowStyle = (skillName: string) => {
     const glows: Record<string, string> = {
-      java: "radial-gradient(circle at 0% 0%, rgba(59,130,246,0.2) 0%, transparent 75%), radial-gradient(circle at 100% 100%, rgba(139,92,246,0.2) 0%, transparent 75%)",
-      python: "radial-gradient(circle at 0% 0%, rgba(139,92,246,0.2) 0%, transparent 75%), radial-gradient(circle at 100% 100%, rgba(6,182,212,0.2) 0%, transparent 75%)",
-      html: "radial-gradient(circle at 0% 0%, rgba(6,182,212,0.2) 0%, transparent 75%), radial-gradient(circle at 100% 100%, rgba(59,130,246,0.2) 0%, transparent 75%)",
-      css: "radial-gradient(circle at 0% 0%, rgba(59,130,246,0.2) 0%, transparent 75%), radial-gradient(circle at 100% 100%, rgba(139,92,246,0.2) 0%, transparent 75%)",
-      javascript: "radial-gradient(circle at 0% 0%, rgba(6,182,212,0.2) 0%, transparent 75%), radial-gradient(circle at 100% 100%, rgba(59,130,246,0.2) 0%, transparent 75%)",
-      firebase: "radial-gradient(circle at 0% 0%, rgba(16,185,129,0.2) 0%, transparent 75%), radial-gradient(circle at 100% 100%, rgba(6,182,212,0.2) 0%, transparent 75%)",
-      figma: "radial-gradient(circle at 0% 0%, rgba(168,85,247,0.2) 0%, transparent 75%), radial-gradient(circle at 100% 100%, rgba(236,72,153,0.2) 0%, transparent 75%)",
-      canva: "radial-gradient(circle at 0% 0%, rgba(168,85,247,0.2) 0%, transparent 75%), radial-gradient(circle at 100% 100%, rgba(59,130,246,0.2) 0%, transparent 75%)",
-      antigravity: "radial-gradient(circle at 0% 0%, rgba(139,92,246,0.2) 0%, transparent 75%), radial-gradient(circle at 100% 100%, rgba(236,72,153,0.2) 0%, transparent 75%)",
-      stitch: "radial-gradient(circle at 0% 0%, rgba(59,130,246,0.2) 0%, transparent 60%), radial-gradient(circle at 100% 100%, rgba(6,182,212,0.2) 0%, transparent 60%), radial-gradient(circle at 50% 50%, rgba(139,92,246,0.15) 0%, transparent 60%)"
+      java: "linear-gradient(135deg, rgba(59,130,246,0.16) 0%, rgba(139,92,246,0.12) 100%), radial-gradient(circle at 0% 0%, rgba(59,130,246,0.25) 0%, transparent 80%), radial-gradient(circle at 100% 100%, rgba(139,92,246,0.25) 0%, transparent 80%)",
+      python: "linear-gradient(135deg, rgba(139,92,246,0.16) 0%, rgba(6,182,212,0.12) 100%), radial-gradient(circle at 0% 0%, rgba(139,92,246,0.25) 0%, transparent 80%), radial-gradient(circle at 100% 100%, rgba(6,182,212,0.25) 0%, transparent 80%)",
+      html: "linear-gradient(135deg, rgba(6,182,212,0.16) 0%, rgba(59,130,246,0.12) 100%), radial-gradient(circle at 0% 0%, rgba(6,182,212,0.25) 0%, transparent 80%), radial-gradient(circle at 100% 100%, rgba(59,130,246,0.25) 0%, transparent 80%)",
+      css: "linear-gradient(135deg, rgba(59,130,246,0.16) 0%, rgba(139,92,246,0.12) 100%), radial-gradient(circle at 0% 0%, rgba(59,130,246,0.25) 0%, transparent 80%), radial-gradient(circle at 100% 100%, rgba(139,92,246,0.25) 0%, transparent 80%)",
+      javascript: "linear-gradient(135deg, rgba(245,158,11,0.12) 0%, rgba(59,130,246,0.16) 100%), radial-gradient(circle at 0% 0%, rgba(245,158,11,0.2) 0%, transparent 80%), radial-gradient(circle at 100% 100%, rgba(59,130,246,0.25) 0%, transparent 80%)",
+      firebase: "linear-gradient(135deg, rgba(34,197,94,0.16) 0%, rgba(6,182,212,0.12) 100%), radial-gradient(circle at 0% 0%, rgba(34,197,94,0.25) 0%, transparent 80%), radial-gradient(circle at 100% 100%, rgba(6,182,212,0.25) 0%, transparent 80%)",
+      figma: "linear-gradient(135deg, rgba(236,72,153,0.16) 0%, rgba(139,92,246,0.12) 100%), radial-gradient(circle at 0% 0%, rgba(236,72,153,0.25) 0%, transparent 80%), radial-gradient(circle at 100% 100%, rgba(139,92,246,0.25) 0%, transparent 80%)",
+      canva: "linear-gradient(135deg, rgba(139,92,246,0.16) 0%, rgba(6,182,212,0.12) 100%), radial-gradient(circle at 0% 0%, rgba(139,92,246,0.25) 0%, transparent 80%), radial-gradient(circle at 100% 100%, rgba(6,182,212,0.25) 0%, transparent 80%)",
+      antigravity: "linear-gradient(135deg, rgba(59,130,246,0.16) 0%, rgba(236,72,153,0.12) 100%), radial-gradient(circle at 0% 0%, rgba(59,130,246,0.25) 0%, transparent 80%), radial-gradient(circle at 100% 100%, rgba(236,72,153,0.25) 0%, transparent 80%)",
+      stitch: "linear-gradient(135deg, rgba(6,182,212,0.16) 0%, rgba(139,92,246,0.12) 100%), radial-gradient(circle at 0% 0%, rgba(6,182,212,0.25) 0%, transparent 80%), radial-gradient(circle at 100% 100%, rgba(139,92,246,0.25) 0%, transparent 80%)"
     };
-    return glows[skillName.toLowerCase()] || "radial-gradient(circle at 50% 50%, rgba(148,163,184,0.1) 0%, transparent 75%)";
+    return glows[skillName.toLowerCase()] || "linear-gradient(135deg, rgba(148,163,184,0.12) 0%, rgba(148,163,184,0.08) 100%)";
   };
   return (
     <section
@@ -124,7 +124,7 @@ export const Skills: React.FC = () => {
               >
                 {/* Subtle Ambient Glow Layer */}
                 <div 
-                  className="absolute inset-0 pointer-events-none transition-opacity duration-500 opacity-60 group-hover:opacity-100"
+                  className="absolute inset-0 pointer-events-none transition-opacity duration-500 opacity-90 group-hover:opacity-100"
                   style={{ background: getSkillGlowStyle(skill.name) }}
                 />
                 
