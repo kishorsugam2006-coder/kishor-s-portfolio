@@ -77,6 +77,7 @@ export const skills: Skill[] = [
   { name: 'Figma', category: 'Tools & Platforms', level: 'Tool' },
   { name: 'Canva', category: 'Tools & Platforms', level: 'Tool' },
   { name: 'Antigravity', category: 'Tools & Platforms', level: 'Tool' },
+  { name: 'Stitch', category: 'Tools & Platforms', level: 'Tool' },
 ];
 export const softSkills = [
   "Positive Thinker",
