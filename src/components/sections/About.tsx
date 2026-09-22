@@ -34,6 +34,16 @@ export const About: React.FC = () => {
       desc: "Quickly mastering new programming workflows, tools, and project environments.",
     },
   ];
+  const getStrengthGlowStyle = (title: string) => {
+    const glows: Record<string, string> = {
+      "positive thinker": "linear-gradient(135deg, rgba(245,158,11,0.16) 0%, rgba(59,130,246,0.12) 100%), radial-gradient(circle at 0% 0%, rgba(245,158,11,0.25) 0%, transparent 80%), radial-gradient(circle at 100% 100%, rgba(6,182,212,0.25) 0%, transparent 80%)",
+      "teamwork & collaboration": "linear-gradient(135deg, rgba(59,130,246,0.16) 0%, rgba(139,92,246,0.12) 100%), radial-gradient(circle at 0% 0%, rgba(59,130,246,0.25) 0%, transparent 80%), radial-gradient(circle at 100% 100%, rgba(236,72,153,0.25) 0%, transparent 80%)",
+      "willingness to learn": "linear-gradient(135deg, rgba(6,182,212,0.16) 0%, rgba(59,130,246,0.12) 100%), radial-gradient(circle at 0% 0%, rgba(6,182,212,0.25) 0%, transparent 80%), radial-gradient(circle at 100% 100%, rgba(139,92,246,0.25) 0%, transparent 80%)",
+      "adaptability": "linear-gradient(135deg, rgba(34,197,94,0.16) 0%, rgba(6,182,212,0.12) 100%), radial-gradient(circle at 0% 0%, rgba(34,197,94,0.25) 0%, transparent 80%), radial-gradient(circle at 100% 100%, rgba(139,92,246,0.25) 0%, transparent 80%)"
+    };
+    return glows[title.toLowerCase()] || "linear-gradient(135deg, rgba(148,163,184,0.12) 0%, rgba(148,163,184,0.08) 100%)";
+  };
+
   return (
     <section id="about" className="py-20 md:py-28 relative">
       {" "}
@@ -174,10 +184,14 @@ export const About: React.FC = () => {
             {softSkillPillars.map((pillar, idx) => (
               <div
                 key={idx}
-                className="glass-panel card-glow p-6 rounded-3xl border border-slate-200 dark:border-slate-800/80 transition-all group shadow-sm flex flex-col justify-between"
+                className="glass-panel card-glow relative overflow-hidden p-6 rounded-3xl border border-slate-200 dark:border-slate-800/80 transition-all group shadow-sm flex flex-col justify-between"
               >
                 {" "}
-                <div className="space-y-3">
+                <div 
+                  className="absolute inset-0 pointer-events-none transition-opacity duration-500 opacity-90 group-hover:opacity-100"
+                  style={{ background: getStrengthGlowStyle(pillar.title) }}
+                />
+                <div className="relative z-10 space-y-3">
                   {" "}
                   <div className="p-3 rounded-2xl bg-slate-100 dark:bg-slate-800 w-fit group-hover:scale-105 transition-transform">
                     {" "}
