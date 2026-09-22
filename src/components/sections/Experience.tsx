@@ -14,6 +14,13 @@ import { experience, internshipCertificate } from "../../data/portfolioData";
 import { Badge } from "../ui/Badge";
 import { Button } from "../ui/Button";
 export const Experience: React.FC = () => {
+  const getExperienceGlowStyle = (type: 'main' | 'aside') => {
+    if (type === 'main') {
+      return "linear-gradient(135deg, rgba(59,130,246,0.18) 0%, rgba(139,92,246,0.14) 100%), radial-gradient(circle at 0% 0%, rgba(6,182,212,0.3) 0%, transparent 80%), radial-gradient(circle at 100% 100%, rgba(236,72,153,0.2) 0%, transparent 80%)";
+    }
+    return "linear-gradient(135deg, rgba(6,182,212,0.18) 0%, rgba(59,130,246,0.14) 100%), radial-gradient(circle at 0% 0%, rgba(139,92,246,0.3) 0%, transparent 80%), radial-gradient(circle at 100% 100%, rgba(245,158,11,0.2) 0%, transparent 80%)";
+  };
+
   return (
     <section
       id="experience"
@@ -71,9 +78,13 @@ export const Experience: React.FC = () => {
                   </div>{" "}
                   {/* Experience Card */}{" "}
                   <div
-                    className={`w-full glass-panel card-glow p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-800/80 transition-all shadow-md space-y-4 relative z-10 ${experience.length === 1 ? "lg:h-full" : "sm:w-[calc(50%-2.5rem)]"}`}
+                    className={`w-full group glass-panel card-glow p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-800/80 transition-all shadow-md space-y-4 relative z-10 overflow-hidden ${experience.length === 1 ? "lg:h-full" : "sm:w-[calc(50%-2.5rem)]"}`}
                   >
                     {" "}
+                    <div 
+                      className="absolute inset-0 pointer-events-none transition-opacity duration-500 opacity-90 group-hover:opacity-100 -z-10"
+                      style={{ background: getExperienceGlowStyle('main') }}
+                    />
                     {/* Header */}{" "}
                     <div className="space-y-1">
                       {" "}
@@ -160,8 +171,12 @@ export const Experience: React.FC = () => {
                     </div>{" "}
                   </div>{" "}
                   {experience.length === 1 && (
-                    <aside className="w-full glass-panel card-glow p-6 sm:p-7 rounded-3xl border border-slate-200 dark:border-slate-800/80 shadow-md flex flex-col gap-5 relative z-10 self-start lg:h-full">
+                    <aside className="w-full group glass-panel card-glow p-6 sm:p-7 rounded-3xl border border-slate-200 dark:border-slate-800/80 shadow-md flex flex-col gap-5 relative z-10 self-start lg:h-full overflow-hidden">
                       {" "}
+                      <div 
+                        className="absolute inset-0 pointer-events-none transition-opacity duration-500 opacity-90 group-hover:opacity-100 -z-10"
+                        style={{ background: getExperienceGlowStyle('aside') }}
+                      />
                       <div className="flex items-center gap-2 text-sky-600 dark:text-sky-400">
                         {" "}
                         <Folder className="w-5 h-5" />{" "}
