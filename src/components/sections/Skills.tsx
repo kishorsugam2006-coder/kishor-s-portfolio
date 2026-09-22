@@ -58,7 +58,7 @@ export const Skills: React.FC = () => {
             <Wrench className="w-3.5 h-3.5" />{" "}
             <span>Technical Capabilities</span>{" "}
           </div>{" "}
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-slate-100 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight skills-heading-gradient">
             {" "}
             Technical Skills & Tools{" "}
           </h2>{" "}

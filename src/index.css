@@ -187,6 +187,20 @@ section h2.projects-heading-gradient {
   -webkit-text-fill-color: transparent;
 }
 
+section h2.skills-heading-gradient {
+  background: linear-gradient(
+    90deg,
+    #334155 0%,
+    #2563EB 25%,
+    #8B5CF6 50%,
+    #D946EF 75%,
+    #D97706 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .strengths-heading-gradient {
   background: linear-gradient(
     90deg,
@@ -227,6 +241,20 @@ section h2.projects-heading-gradient {
     #F8FAFC 0%,
     #3B82F6 30%,
     #C084FC 70%,
+    #FDE047 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dark section h2.skills-heading-gradient {
+  background: linear-gradient(
+    90deg,
+    #F8FAFC 0%,
+    #3B82F6 25%,
+    #C084FC 50%,
+    #E879F9 75%,
     #FDE047 100%
   );
   -webkit-background-clip: text;
