@@ -42,7 +42,7 @@ export const ResumeSection: React.FC = () => {
             version.{" "}
           </p>{" "}
           {/* Action CTAs */}{" "}
-          <div className="flex flex-wrap items-center justify-center gap-3 mt-6 no-print">
+          <div className="flex flex-wrap items-center justify-center gap-3 mt-6">
             {" "}
             <Button
               href={personalInfo.resumeUrl}
@@ -56,11 +56,10 @@ export const ResumeSection: React.FC = () => {
               Download Resume (PDF){" "}
             </Button>{" "}
             <Button
-              onClick={() => window.print()}
+              onClick={() => window.open(personalInfo.resumeUrl, "_blank")}
               variant="outline"
               size="md"
               icon={<Printer className="w-4 h-4" />}
-              className="no-print"
             >
               {" "}
               Print View{" "}
@@ -103,7 +102,7 @@ export const ResumeSection: React.FC = () => {
           {/* Tab Content Display */}{" "}
           <div className="p-8 sm:p-10 space-y-8">
             {" "}
-            <div className={activeTab === "summary" ? "block" : "hidden print:block print:mb-8"}>
+            {activeTab === "summary" && (
               <div className="space-y-6">
                 {" "}
                 <div className="border-b border-slate-200 dark:border-slate-800 pb-6">
@@ -136,8 +135,8 @@ export const ResumeSection: React.FC = () => {
                   </p>{" "}
                 </div>{" "}
               </div>
-            </div>{" "}
-            <div className={activeTab === "experience" ? "block" : "hidden print:block print:mb-8"}>
+            )}{" "}
+            {activeTab === "experience" && (
               <div className="space-y-6">
                 {" "}
                 <h4 className="text-sm font-bold text-slate-400 uppercase tracking-wider">
@@ -174,8 +173,8 @@ export const ResumeSection: React.FC = () => {
                   </div>
                 ))}{" "}
               </div>
-            </div>{" "}
-            <div className={activeTab === "skills" ? "block" : "hidden print:block print:mb-8"}>
+            )}{" "}
+            {activeTab === "skills" && (
               <div className="space-y-6">
                 {" "}
                 <h4 className="text-sm font-bold text-slate-400 uppercase tracking-wider">
@@ -214,8 +213,8 @@ export const ResumeSection: React.FC = () => {
                   ))}{" "}
                 </div>{" "}
               </div>
-            </div>{" "}
-            <div className={activeTab === "education" ? "block" : "hidden print:block print:mb-8"}>
+            )}{" "}
+            {activeTab === "education" && (
               <div className="space-y-6">
                 {" "}
                 <h4 className="text-sm font-bold text-slate-400 uppercase tracking-wider">
@@ -255,7 +254,7 @@ export const ResumeSection: React.FC = () => {
                   ))}{" "}
                 </div>{" "}
               </div>
-            </div>{" "}
+            )}{" "}
           </div>{" "}
         </div>{" "}
       </div>{" "}
