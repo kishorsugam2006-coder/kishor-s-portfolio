@@ -36,7 +36,7 @@ export const Certifications: React.FC = () => {
           {certifications.map((cert) => (
             <div
               key={cert.id}
-              className="glass-panel p-5 rounded-2xl border border-slate-200 dark:border-slate-800 group transition-all shadow-sm flex flex-col"
+              className="glass-panel card-glow p-5 rounded-2xl border border-slate-200 dark:border-slate-800 group transition-all shadow-sm flex flex-col"
             >
               {" "}
               <div className="flex items-center gap-2 text-blue-500 mb-4">
@@ -128,3 +128,4 @@ export const Certifications: React.FC = () => {
     </section>
   );
 };
+

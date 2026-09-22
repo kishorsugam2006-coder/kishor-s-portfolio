@@ -71,7 +71,7 @@ export const Experience: React.FC = () => {
                   </div>{" "}
                   {/* Experience Card */}{" "}
                   <div
-                    className={`w-full glass-panel p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-800/80 transition-all shadow-md space-y-4 relative z-10 ${experience.length === 1 ? "lg:h-full" : "sm:w-[calc(50%-2.5rem)]"}`}
+                    className={`w-full glass-panel card-glow p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-800/80 transition-all shadow-md space-y-4 relative z-10 ${experience.length === 1 ? "lg:h-full" : "sm:w-[calc(50%-2.5rem)]"}`}
                   >
                     {" "}
                     {/* Header */}{" "}
@@ -160,7 +160,7 @@ export const Experience: React.FC = () => {
                     </div>{" "}
                   </div>{" "}
                   {experience.length === 1 && (
-                    <aside className="w-full glass-panel p-6 sm:p-7 rounded-3xl border border-slate-200 dark:border-slate-800/80 shadow-md flex flex-col gap-5 relative z-10 self-start lg:h-full">
+                    <aside className="w-full glass-panel card-glow p-6 sm:p-7 rounded-3xl border border-slate-200 dark:border-slate-800/80 shadow-md flex flex-col gap-5 relative z-10 self-start lg:h-full">
                       {" "}
                       <div className="flex items-center gap-2 text-sky-600 dark:text-sky-400">
                         {" "}
@@ -255,3 +255,4 @@ export const Experience: React.FC = () => {
     </section>
   );
 };
+

@@ -120,7 +120,7 @@ export const Skills: React.FC = () => {
             {filteredSkills.map((skill, idx) => (
               <div
                 key={idx}
-                className="glass-panel relative p-5 rounded-2xl border border-slate-200 dark:border-slate-800/80 transition-all flex items-center justify-between group shadow-sm overflow-hidden"
+                className="glass-panel card-glow relative p-5 rounded-2xl border border-slate-200 dark:border-slate-800/80 transition-all flex items-center justify-between group shadow-sm overflow-hidden"
               >
                 {/* Subtle Ambient Glow Layer */}
                 <div 
@@ -156,7 +156,7 @@ export const Skills: React.FC = () => {
             ))}{" "}
           </div>
         ) : (
-          <div className="text-center py-12 glass-panel rounded-3xl p-8 border border-slate-200 dark:border-slate-800">
+          <div className="text-center py-12 glass-panel card-glow rounded-3xl p-8 border border-slate-200 dark:border-slate-800">
             {" "}
             <p className="text-slate-500 dark:text-slate-400">
               {" "}
@@ -172,3 +172,4 @@ export const Skills: React.FC = () => {
     </section>
   );
 };
+

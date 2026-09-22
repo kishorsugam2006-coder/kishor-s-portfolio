@@ -69,7 +69,7 @@ export const About: React.FC = () => {
             <div className="relative w-full max-w-[420px] lg:max-w-[540px] aspect-[1094/1437] group">
               {" "}
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-cyan-500 to-blue-600 -rotate-2 opacity-20 blur-xl group-hover:opacity-35 transition-opacity duration-300" />{" "}
-              <div className="relative w-full h-full rounded-3xl overflow-hidden glass-panel border-2 border-[var(--border-color)] shadow-2xl p-2.5 transition-transform duration-300 ">
+              <div className="relative w-full h-full rounded-3xl overflow-hidden glass-panel card-glow border-2 border-[var(--border-color)] shadow-2xl p-2.5 transition-transform duration-300 ">
                 {" "}
                 <img
                   src={personalInfo.aboutImageUrl}
@@ -81,7 +81,7 @@ export const About: React.FC = () => {
             </div>{" "}
           </div>{" "}
           {/* RIGHT: Bio Narrative */}{" "}
-          <div className="lg:col-span-7 space-y-6 glass-panel p-8 sm:p-10 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-xl">
+          <div className="lg:col-span-7 space-y-6 glass-panel card-glow p-8 sm:p-10 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-xl">
             {" "}
             <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-100">
               {" "}
@@ -174,7 +174,7 @@ export const About: React.FC = () => {
             {softSkillPillars.map((pillar, idx) => (
               <div
                 key={idx}
-                className="glass-panel p-6 rounded-3xl border border-slate-200 dark:border-slate-800/80 transition-all group shadow-sm flex flex-col justify-between"
+                className="glass-panel card-glow p-6 rounded-3xl border border-slate-200 dark:border-slate-800/80 transition-all group shadow-sm flex flex-col justify-between"
               >
                 {" "}
                 <div className="space-y-3">
@@ -200,3 +200,4 @@ export const About: React.FC = () => {
     </section>
   );
 };
+

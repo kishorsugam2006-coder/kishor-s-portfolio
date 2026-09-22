@@ -40,7 +40,7 @@ export const Projects: React.FC = () => {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="group glass-panel rounded-3xl border border-slate-200 dark:border-slate-800/80 transition-all duration-300 overflow-hidden flex flex-col justify-between shadow-md "
+              className="group glass-panel card-glow rounded-3xl border border-slate-200 dark:border-slate-800/80 transition-all duration-300 overflow-hidden flex flex-col justify-between shadow-md "
             >
               {" "}
               {/* Thumbnail Header */}{" "}
@@ -130,3 +130,4 @@ export const Projects: React.FC = () => {
     </section>
   );
 };
+

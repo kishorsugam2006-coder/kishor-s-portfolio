@@ -37,7 +37,7 @@ export const Achievements: React.FC = () => {
           {achievements.map((ach) => (
             <div
               key={ach.id}
-              className="glass-panel p-8 rounded-3xl border border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 transition-all shadow-lg"
+              className="glass-panel card-glow p-8 rounded-3xl border border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 transition-all shadow-lg"
             >
               {" "}
               <div className="flex items-start gap-4">
@@ -79,3 +79,4 @@ export const Achievements: React.FC = () => {
     </section>
   );
 };
+

@@ -34,7 +34,7 @@ export const Education: React.FC = () => {
           {education.map((edu) => (
             <div
               key={edu.id}
-              className="glass-panel p-8 rounded-3xl border border-slate-200 dark:border-slate-800/80 transition-all flex flex-col justify-between group shadow-md space-y-6"
+              className="glass-panel card-glow p-8 rounded-3xl border border-slate-200 dark:border-slate-800/80 transition-all flex flex-col justify-between group shadow-md space-y-6"
             >
               {" "}
               <div className="space-y-4">
@@ -74,3 +74,4 @@ export const Education: React.FC = () => {
     </section>
   );
 };
+
