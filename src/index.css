@@ -284,6 +284,32 @@ button:active, a:active {
   }
 }
 
+.btn-explosive {
+  background: linear-gradient(90deg, #2563EB, #7C3AED, #EC4899, #F59E0B);
+  background-size: 200% 100%;
+  color: #ffffff !important;
+  border: none;
+  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.25);
+  transition: all 0.3s ease;
+}
+
+.btn-explosive:hover {
+  background-position: 100% 0;
+  box-shadow: 0 8px 25px rgba(124, 58, 237, 0.45);
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+.dark .btn-explosive {
+  background: linear-gradient(90deg, #3B82F6, #A78BFA, #F472B6, #FBBF24);
+  background-size: 200% 100%;
+  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.35);
+}
+
+.dark .btn-explosive:hover {
+  box-shadow: 0 8px 25px rgba(124, 58, 237, 0.55);
+}
+
 /* Accessible focus ring */
 *:focus-visible {
   outline: 2px solid var(--accent-primary);

@@ -79,7 +79,7 @@ export const Hero: React.FC = () => {
               {" "}
               <Button
                 href="#projects"
-                variant="primary"
+                variant="explosive"
                 size="lg"
                 icon={<ArrowRight className="w-5 h-5" />}
                 iconPosition="right"

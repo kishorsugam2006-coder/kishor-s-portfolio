@@ -1,6 +1,6 @@
 import React from "react";
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary" | "outline" | "ghost";
+  variant?: "primary" | "secondary" | "outline" | "ghost" | "explosive";
   size?: "sm" | "md" | "lg";
   icon?: React.ReactNode;
   iconPosition?: "left" | "right";
@@ -39,6 +39,7 @@ export const Button: React.FC<ButtonProps> = ({
       "border border-[rgba(var(--accent-rgb),0.22)] hover:border-[var(--hover-border)] bg-white/10 dark:bg-slate-900/20 hover:bg-[rgba(var(--hover-rgb),0.08)] hover:shadow-[0_0_25px_var(--hover-glow)] text-slate-800 dark:text-slate-100 backdrop-blur-sm transition-all",
     ghost:
       "bg-transparent hover:bg-[rgba(var(--hover-rgb),0.08)] hover:shadow-[0_0_20px_var(--hover-glow)] text-slate-700 dark:text-slate-200 transition-all",
+    explosive: "btn-explosive",
   };
   const combinedClasses = `inline-flex items-center justify-center gap-2 cursor-pointer transition-all ${sizeClasses[size]} ${variantClasses[variant]} ${className}`;
   if (href) {
