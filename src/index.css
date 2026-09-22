@@ -283,14 +283,60 @@ button:active, a:active {
 
 /* Print Stylesheet for Resume */
 @media print {
+  @page {
+    size: A4 portrait;
+    margin: 12mm;
+  }
+
   body {
     background: #ffffff !important;
     color: #000000 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
-  header, footer, .no-print {
+
+  /* Hide everything we don't need */
+  header, 
+  footer, 
+  .no-print,
+  #hero,
+  #about,
+  #projects,
+  #skills,
+  #experience,
+  #education,
+  #achievements,
+  #services,
+  #certifications,
+  #contact,
+  .molecular-background,
+  canvas {
     display: none !important;
   }
-  .print-only {
-    display: block !important;
+
+  /* Specific elements to hide inside #resume */
+  #resume .no-print,
+  #resume button {
+    display: none !important;
+  }
+
+  /* Remove dark mode and glows */
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    background: transparent !important;
+    color: #000 !important;
+    border-color: #ccc !important;
+  }
+
+  /* Keep glass panels minimal */
+  .glass-panel {
+    border: none !important;
+    padding: 0 !important;
+  }
+
+  #resume {
+    padding: 0 !important;
+    margin: 0 !important;
   }
 }
