@@ -91,85 +91,93 @@ export const About: React.FC = () => {
             </div>{" "}
           </div>{" "}
           {/* RIGHT: Bio Narrative */}{" "}
-          <div className="lg:col-span-7 space-y-6 glass-panel card-glow p-8 sm:p-10 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-xl">
+          <div 
+            className="lg:col-span-7 space-y-6 glass-panel card-glow p-8 sm:p-10 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-xl relative overflow-hidden"
+            style={{ background: "linear-gradient(120deg, rgba(59,130,246,0.18) 0%, rgba(6,182,212,0.18) 25%, rgba(139,92,246,0.16) 50%, rgba(236,72,153,0.16) 75%, rgba(251,146,60,0.12) 100%)" }}
+          >
             {" "}
-            <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-100">
-              {" "}
-              Who I Am & What I Build{" "}
-            </h3>{" "}
-            <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
-              {" "}
-              I am{" "}
-              <strong className="text-slate-900 dark:text-slate-100">
-                {personalInfo.name}
-              </strong>
-              , an{" "}
-              <strong className="text-slate-900 dark:text-slate-100">
-                {professionalPositioning.primaryRole}
-              </strong>{" "}
-              based in {personalInfo.location}. Currently pursuing my B.Tech in
-              Information Technology at M. Kumarasamy College of Engineering, I
-              have a strong foundation in web design, software development, and
-              database queries.{" "}
-            </p>{" "}
-            <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
-              {" "}
-              My technical experience spans frontend technologies like{" "}
-              <strong className="text-slate-900 dark:text-slate-100">
-                HTML, CSS, JavaScript
-              </strong>
-              , backend languages like{" "}
-              <strong className="text-slate-900 dark:text-slate-100">
-                PHP & Java
-              </strong>
-              , and database systems like{" "}
-              <strong className="text-slate-900 dark:text-slate-100">
-                SQL & MySQL
-              </strong>
-              . During my internship at Movicloud Labs, I developed responsive
-              frontend UI components for web and mobile applications.{" "}
-            </p>{" "}
-            <div className="p-4 rounded-2xl bg-blue-500/5 border border-blue-500/15 space-y-2">
-              {" "}
-              <div className="flex items-center gap-2 text-blue-600 dark:text-cyan-400 font-semibold text-sm">
+            <div className="relative z-10 space-y-6">
+              <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-100">
                 {" "}
-                <Compass className="w-4 h-4" />{" "}
-                <span>Current Direction</span>{" "}
-              </div>{" "}
-              <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300">
+                Who I Am & What I Build{" "}
+              </h3>{" "}
+              <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
                 {" "}
-                <strong>Current Focus:</strong>{" "}
-                {professionalPositioning.currentFocus}{" "}
+                I am{" "}
+                <strong className="text-slate-900 dark:text-slate-100">
+                  {personalInfo.name}
+                </strong>
+                , an{" "}
+                <strong className="text-slate-900 dark:text-slate-100">
+                  {professionalPositioning.primaryRole}
+                </strong>{" "}
+                based in {personalInfo.location}. Currently pursuing my B.Tech in
+                Information Technology at M. Kumarasamy College of Engineering, I
+                have a strong foundation in web design, software development, and
+                database queries.{" "}
               </p>{" "}
-              <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300">
+              <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
                 {" "}
-                <strong>Career Goal:</strong>{" "}
-                {professionalPositioning.careerGoal}{" "}
+                My technical experience spans frontend technologies like{" "}
+                <strong className="text-slate-900 dark:text-slate-100">
+                  HTML, CSS, JavaScript
+                </strong>
+                , backend languages like{" "}
+                <strong className="text-slate-900 dark:text-slate-100">
+                  PHP & Java
+                </strong>
+                , and database systems like{" "}
+                <strong className="text-slate-900 dark:text-slate-100">
+                  SQL & MySQL
+                </strong>
+                . During my internship at Movicloud Labs, I developed responsive
+                frontend UI components for web and mobile applications.{" "}
               </p>{" "}
-            </div>{" "}
-            <div className="pt-4 border-t border-slate-200 dark:border-slate-800 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
-              {" "}
-              <div className="flex items-center gap-2 text-slate-700 dark:text-slate-300">
+              <div 
+                className="p-4 rounded-2xl border border-blue-500/15 space-y-2 relative overflow-hidden"
+                style={{ background: "linear-gradient(135deg, rgba(59,130,246,0.08) 0%, rgba(139,92,246,0.08) 50%, rgba(236,72,153,0.08) 100%)" }}
+              >
                 {" "}
-                <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />{" "}
-                <span>Responsive Frontend Interfaces</span>{" "}
+                <div className="flex items-center gap-2 text-blue-600 dark:text-cyan-400 font-semibold text-sm">
+                  {" "}
+                  <Compass className="w-4 h-4" />{" "}
+                  <span>Current Direction</span>{" "}
+                </div>{" "}
+                <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300">
+                  {" "}
+                  <strong>Current Focus:</strong>{" "}
+                  {professionalPositioning.currentFocus}{" "}
+                </p>{" "}
+                <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300">
+                  {" "}
+                  <strong>Career Goal:</strong>{" "}
+                  {professionalPositioning.careerGoal}{" "}
+                </p>{" "}
               </div>{" "}
-              <div className="flex items-center gap-2 text-slate-700 dark:text-slate-300">
+              <div className="pt-4 border-t border-slate-200 dark:border-slate-800 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
                 {" "}
-                <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />{" "}
-                <span>SQL Database Queries</span>{" "}
+                <div className="flex items-center gap-2 text-slate-700 dark:text-slate-300">
+                  {" "}
+                  <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />{" "}
+                  <span>Responsive Frontend Interfaces</span>{" "}
+                </div>{" "}
+                <div className="flex items-center gap-2 text-slate-700 dark:text-slate-300">
+                  {" "}
+                  <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />{" "}
+                  <span>Figma UI Layout Design</span>{" "}
+                </div>{" "}
+                <div className="flex items-center gap-2 text-slate-700 dark:text-slate-300">
+                  {" "}
+                  <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />{" "}
+                  <span>SQL Database Queries</span>{" "}
+                </div>{" "}
+                <div className="flex items-center gap-2 text-slate-700 dark:text-slate-300">
+                  {" "}
+                  <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />{" "}
+                  <span>Real-Time IoT & AI Projects</span>{" "}
+                </div>{" "}
               </div>{" "}
-              <div className="flex items-center gap-2 text-slate-700 dark:text-slate-300">
-                {" "}
-                <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />{" "}
-                <span>Figma UI Layout Design</span>{" "}
-              </div>{" "}
-              <div className="flex items-center gap-2 text-slate-700 dark:text-slate-300">
-                {" "}
-                <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />{" "}
-                <span>Real-Time IoT & AI Projects</span>{" "}
-              </div>{" "}
-            </div>{" "}
+            </div>
           </div>{" "}
         </div>{" "}
         {/* Soft Skill Pillars */}{" "}
