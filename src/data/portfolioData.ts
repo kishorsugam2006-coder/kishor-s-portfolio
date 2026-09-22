@@ -68,7 +68,15 @@ export const stats: StatItem[] = [
   },
 ];
 export const skills: Skill[] = [
-  // Programming { name: 'Java', category: 'Programming', level: 'Core Skill' }, { name: 'Python', category: 'Programming', level: 'Working Knowledge' }, // Web { name: 'HTML5', category: 'Web', level: 'Core Skill' }, { name: 'CSS3', category: 'Web', level: 'Core Skill' }, { name: 'JavaScript', category: 'Web', level: 'Core Skill' }, { name: 'Bootstrap', category: 'Web', level: 'Working Knowledge' }, { name: 'PHP', category: 'Web', level: 'Working Knowledge' }, // Database { name: 'Firebase', category: 'Database', level: 'Core Skill' }, { name: 'MySQL', category: 'Database', level: 'Working Knowledge' }, // Tools & Platforms { name: 'Figma', category: 'Tools & Platforms', level: 'Tool' }, { name: 'Canva', category: 'Tools & Platforms', level: 'Tool' }, { name: 'Antigravity', category: 'Tools & Platforms', level: 'Tool' },
+  { name: 'Java', category: 'Programming', level: 'Core Skill' },
+  { name: 'Python', category: 'Programming', level: 'Working Knowledge' },
+  { name: 'HTML', category: 'Web', level: 'Core Skill' },
+  { name: 'CSS', category: 'Web', level: 'Core Skill' },
+  { name: 'JavaScript', category: 'Web', level: 'Core Skill' },
+  { name: 'Firebase', category: 'Database', level: 'Core Skill' },
+  { name: 'Figma', category: 'Tools & Platforms', level: 'Tool' },
+  { name: 'Canva', category: 'Tools & Platforms', level: 'Tool' },
+  { name: 'Antigravity', category: 'Tools & Platforms', level: 'Tool' },
 ];
 export const softSkills = [
   "Positive Thinker",

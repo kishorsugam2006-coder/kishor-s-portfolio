@@ -2,11 +2,9 @@ import React, { useState } from "react";
 import {
   FileText,
   Download,
-  Printer,
   GraduationCap,
   Award,
 } from "lucide-react";
-import confetti from "canvas-confetti";
 import {
   personalInfo,
   experience,
@@ -20,19 +18,6 @@ export const ResumeSection: React.FC = () => {
   const [activeTab, setActiveTab] = useState<
     "summary" | "experience" | "skills" | "education"
   >("summary");
-  const triggerDownload = () => {
-    confetti({ particleCount: 80, spread: 70, origin: { y: 0.6 } });
-    const link = document.createElement("a");
-    link.href =
-      personalInfo.resumeUrl === "#resume" ? "#" : personalInfo.resumeUrl;
-    link.download = `Kishor_S_Resume.pdf`;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-  const handlePrint = () => {
-    window.print();
-  };
   return (
     <section id="resume" className="py-20 md:py-28 relative">
       {" "}
@@ -59,22 +44,15 @@ export const ResumeSection: React.FC = () => {
           <div className="flex flex-wrap items-center justify-center gap-3 mt-6">
             {" "}
             <Button
-              onClick={triggerDownload}
+              href={personalInfo.resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               variant="primary"
               size="md"
               icon={<Download className="w-4 h-4" />}
             >
               {" "}
               Download Resume (PDF){" "}
-            </Button>{" "}
-            <Button
-              onClick={handlePrint}
-              variant="outline"
-              size="md"
-              icon={<Printer className="w-4 h-4" />}
-            >
-              {" "}
-              Print View{" "}
             </Button>{" "}
           </div>{" "}
         </div>{" "}
