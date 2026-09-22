@@ -220,10 +220,13 @@ export const Hero: React.FC = () => {
           </div>{" "}
         </div>{" "}
         {/* Dynamic Stats Bar */}{" "}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 p-6 sm:p-8 rounded-3xl glass-panel border border-slate-200/80 dark:border-slate-800/80">
+        <div 
+          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 p-6 sm:p-8 rounded-3xl glass-panel card-glow relative overflow-hidden border border-slate-200/80 dark:border-slate-800/80"
+          style={{ background: "linear-gradient(135deg, rgba(59,130,246,0.18) 0%, rgba(139,92,246,0.16) 33%, rgba(6,182,212,0.16) 66%, rgba(236,72,153,0.16) 100%)" }}
+        >
           {" "}
           {stats.map((stat, idx) => (
-            <div key={idx} className="space-y-1 text-center md:text-left">
+            <div key={idx} className="relative z-10 space-y-1 text-center md:text-left">
               {" "}
               <div className="text-2xl sm:text-4xl font-extrabold gradient-text">
                 {stat.value}
