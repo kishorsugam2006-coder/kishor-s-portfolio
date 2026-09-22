@@ -8,6 +8,21 @@ import { ProjectModal } from "./ProjectModal";
 import { GithubIcon } from "../ui/SocialIcons";
 export const Projects: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
+  const getProjectGlowStyle = (idx: number) => {
+    const glows = [
+      // Blue + Cyan + Violet
+      "linear-gradient(135deg, rgba(59,130,246,0.18) 0%, rgba(139,92,246,0.14) 100%), radial-gradient(circle at 0% 0%, rgba(6,182,212,0.3) 0%, transparent 80%), radial-gradient(circle at 100% 100%, rgba(139,92,246,0.3) 0%, transparent 80%)",
+      // Purple + Blue + Pink
+      "linear-gradient(135deg, rgba(139,92,246,0.18) 0%, rgba(236,72,153,0.14) 100%), radial-gradient(circle at 0% 0%, rgba(139,92,246,0.3) 0%, transparent 80%), radial-gradient(circle at 100% 100%, rgba(59,130,246,0.3) 0%, transparent 80%)",
+      // Cyan + Blue + Violet
+      "linear-gradient(135deg, rgba(6,182,212,0.18) 0%, rgba(59,130,246,0.14) 100%), radial-gradient(circle at 0% 0%, rgba(6,182,212,0.3) 0%, transparent 80%), radial-gradient(circle at 100% 100%, rgba(139,92,246,0.3) 0%, transparent 80%)",
+      // Gold + Pink + Blue
+      "linear-gradient(135deg, rgba(245,158,11,0.15) 0%, rgba(236,72,153,0.15) 100%), radial-gradient(circle at 0% 0%, rgba(245,158,11,0.3) 0%, transparent 80%), radial-gradient(circle at 100% 100%, rgba(59,130,246,0.3) 0%, transparent 80%)"
+    ];
+    return glows[idx % glows.length];
+  };
+
   return (
     <section id="projects" className="py-20 md:py-28 relative">
       {" "}
@@ -37,14 +52,19 @@ export const Projects: React.FC = () => {
         {/* Projects Cards Grid */}{" "}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {" "}
-          {projects.map((project) => (
+          {projects.map((project, idx) => (
             <div
               key={project.id}
-              className="group glass-panel card-glow rounded-3xl border border-slate-200 dark:border-slate-800/80 transition-all duration-300 overflow-hidden flex flex-col justify-between shadow-md "
+              className="group glass-panel card-glow relative rounded-3xl border border-slate-200 dark:border-slate-800/80 transition-all duration-300 overflow-hidden flex flex-col justify-between shadow-md "
             >
               {" "}
+              {/* Subtle Ambient Glow Layer */}
+              <div 
+                className="absolute inset-0 pointer-events-none transition-opacity duration-500 opacity-90 group-hover:opacity-100"
+                style={{ background: getProjectGlowStyle(idx) }}
+              />
               {/* Thumbnail Header */}{" "}
-              <div className="relative overflow-hidden aspect-video bg-slate-900">
+              <div className="relative z-10 overflow-hidden aspect-video bg-slate-900">
                 {" "}
                 <img
                   src={project.thumbnail}
@@ -67,7 +87,7 @@ export const Projects: React.FC = () => {
                 </div>{" "}
               </div>{" "}
               {/* Body Content */}{" "}
-              <div className="p-6 space-y-4 flex-1 flex flex-col justify-between">
+              <div className="relative z-10 p-6 space-y-4 flex-1 flex flex-col justify-between">
                 {" "}
                 <div className="space-y-2">
                   {" "}
