@@ -35,19 +35,19 @@ export const Certifications: React.FC = () => {
           {" "}
           {certifications.map((cert, index) => {
             const cardGradients = [
-              "!bg-gradient-to-br from-[#172554] via-[#2563EB] to-[#7C3AED] hover:from-[#1e3380] hover:via-[#3b82f6] hover:to-[#8b5cf6] !shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:!shadow-[0_0_40px_rgba(37,99,235,0.6)] border-white/10 backdrop-blur-md",
-              "!bg-gradient-to-br from-[#2E1065] via-[#7C3AED] to-[#DB2777] hover:from-[#3b1582] hover:via-[#8b5cf6] hover:to-[#ec4899] !shadow-[0_0_20px_rgba(124,58,237,0.3)] hover:!shadow-[0_0_40px_rgba(124,58,237,0.6)] border-white/10 backdrop-blur-md",
-              "!bg-gradient-to-br from-[#083344] via-[#0891B2] to-[#4F46E5] hover:from-[#0b4861] hover:via-[#06b6d4] hover:to-[#6366f1] !shadow-[0_0_20px_rgba(8,145,178,0.3)] hover:!shadow-[0_0_40px_rgba(8,145,178,0.6)] border-white/10 backdrop-blur-md",
-              "!bg-gradient-to-br from-[#3B0764] via-[#A855F7] to-[#2563EB] hover:from-[#4c1d95] hover:via-[#c084fc] hover:to-[#3b82f6] !shadow-[0_0_20px_rgba(168,85,247,0.3)] hover:!shadow-[0_0_40px_rgba(168,85,247,0.6)] border-white/10 backdrop-blur-md",
-              "!bg-gradient-to-br from-[#172554] via-[#4F46E5] to-[#06B6D4] hover:from-[#1e3380] hover:via-[#6366f1] hover:to-[#22d3ee] !shadow-[0_0_20px_rgba(79,70,229,0.3)] hover:!shadow-[0_0_40px_rgba(79,70,229,0.6)] border-white/10 backdrop-blur-md"
+              "!bg-gradient-to-br from-[#DFF3FF] via-[#E5E7FF] to-[#F0E5FF] hover:from-[#cce9ff] hover:via-[#d4d7ff] hover:to-[#e4d4ff] !border-[rgba(99,102,241,0.12)]",
+              "!bg-gradient-to-br from-[#EEE7FF] via-[#F0E5FF] to-[#FCE4F1] hover:from-[#e2d4ff] hover:via-[#e4d4ff] hover:to-[#fad1e8] !border-[rgba(99,102,241,0.12)]",
+              "!bg-gradient-to-br from-[#DDF8FA] via-[#E1EEFF] to-[#EAE5FF] hover:from-[#c9f4f7] hover:via-[#cce0ff] hover:to-[#ded4ff] !border-[rgba(99,102,241,0.12)]",
+              "!bg-gradient-to-br from-[#EDE2FF] via-[#F8E2F0] to-[#E4EEFF] hover:from-[#e1ccff] hover:via-[#f5d1e8] hover:to-[#cce0ff] !border-[rgba(99,102,241,0.12)]",
+              "!bg-gradient-to-br from-[#E2ECFF] via-[#ECE4FF] to-[#DDF6FA] hover:from-[#cce0ff] hover:via-[#e1ccff] hover:to-[#c9f1f7] !border-[rgba(99,102,241,0.12)]"
             ];
             
             const iconColors = [
-              "!text-blue-200",
-              "!text-pink-200",
-              "!text-cyan-200",
-              "!text-purple-200",
-              "!text-cyan-200"
+              "!text-[#2563EB]",
+              "!text-[#7C3AED]",
+              "!text-[#0891B2]",
+              "!text-[#A855F7]",
+              "!text-[#4F46E5]"
             ];
 
             const glowClass = cardGradients[index % 5];
@@ -56,7 +56,7 @@ export const Certifications: React.FC = () => {
             return (
             <div
               key={cert.id}
-              className={`glass-panel p-5 rounded-2xl border transition-all shadow-sm flex flex-col group hover:-translate-y-1.5 ${glowClass}`}
+              className={`glass-panel p-5 rounded-2xl border transition-all shadow-sm hover:shadow-md flex flex-col group hover:-translate-y-1.5 ${glowClass}`}
             >
               {" "}
               <div className={`flex items-center gap-2 mb-4 ${iconColor}`}>
@@ -77,19 +77,19 @@ export const Certifications: React.FC = () => {
                     className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 rounded-lg"
                   >
                     {" "}
-                    <h4 className="font-bold !text-white text-lg transition-colors">
+                    <h4 className="font-bold !text-[#172033] text-lg transition-colors">
                       {cert.title}
                     </h4>{" "}
                   </a>
                 ) : (
-                  <h4 className="font-bold !text-white text-lg">
+                  <h4 className="font-bold !text-[#172033] text-lg">
                     {cert.title}
                   </h4>
                 )}{" "}
-                <p className="text-sm font-semibold !text-slate-200">
+                <p className="text-sm font-semibold !text-[#26344D]">
                   {cert.issuer}
                 </p>{" "}
-                <div className="space-y-1 text-xs !text-slate-300">
+                <div className="space-y-1 text-xs !text-[#40516B]">
                   {" "}
                   {cert.period && <p>{cert.period}</p>}{" "}
                   {cert.courseDuration && <p>{cert.courseDuration}</p>}{" "}
@@ -108,7 +108,7 @@ export const Certifications: React.FC = () => {
                         href={cert.verificationUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-blue-300 hover:text-blue-100 hover:underline"
+                        className="text-blue-600 hover:text-blue-800 hover:underline"
                       >
                         {" "}
                         Verify Credential{" "}
@@ -131,13 +131,13 @@ export const Certifications: React.FC = () => {
                   size="sm"
                   icon={<ExternalLink className="w-4 h-4 text-white" />}
                   aria-label={`View ${cert.title} certificate`}
-                  className="mt-5 w-full justify-center !bg-gradient-to-r !from-[#111827] !to-[#312E81] hover:!from-[#1f2937] hover:!to-[#4338ca] !text-white !border border-white/10 shadow-[0_4px_15px_rgba(0,0,0,0.3)] hover:shadow-[0_0_20px_rgba(49,46,129,0.8)] hover:-translate-y-1 transition-all duration-300"
+                  className="mt-5 w-full justify-center !bg-gradient-to-r !from-[#2563EB] !to-[#6D28D9] hover:!from-[#1d4ed8] hover:!to-[#5b21b6] !text-white !border-0 shadow-[0_4px_10px_rgba(37,99,235,0.2)] hover:shadow-[0_4px_15px_rgba(37,99,235,0.4)] hover:-translate-y-1 transition-all duration-300"
                 >
                   {" "}
                   View Certificate{" "}
                 </Button>
               ) : (
-                <p className="mt-5 text-center text-xs !text-slate-300">
+                <p className="mt-5 text-center text-xs !text-[#40516B]">
                   Certificate file is currently unavailable.
                 </p>
               )}{" "}
