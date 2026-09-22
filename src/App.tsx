@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { ThemeProvider } from "./context/ThemeContext";
 import { Navbar } from "./components/layout/Navbar";
 import { Footer } from "./components/layout/Footer";
@@ -14,22 +14,7 @@ import { Certifications } from "./components/sections/Certifications";
 import { ResumeSection } from "./components/sections/ResumeSection";
 import { Contact } from "./components/sections/Contact";
 import { MolecularBackground } from "./components/ui/MolecularBackground";
-import { ResumePrint } from "./pages/ResumePrint";
-
 export const App: React.FC = () => {
-  const [currentPath, setCurrentPath] = useState(window.location.pathname);
-
-  useEffect(() => {
-    const handlePopState = () => {
-      setCurrentPath(window.location.pathname);
-    };
-    window.addEventListener("popstate", handlePopState);
-    return () => window.removeEventListener("popstate", handlePopState);
-  }, []);
-
-  if (currentPath === "/resume-print") {
-    return <ResumePrint />;
-  }
 
   return (
     <ThemeProvider>
