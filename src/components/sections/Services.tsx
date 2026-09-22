@@ -13,9 +13,9 @@ import { Button } from "../ui/Button";
 export const Services: React.FC = () => {
   const getIcon = (iconName: string, index: number) => {
     const iconColors = [
-      "text-blue-600 dark:text-blue-400",
-      "text-violet-600 dark:text-violet-400",
-      "text-cyan-600 dark:text-cyan-400"
+      "!text-blue-200",
+      "!text-pink-200",
+      "!text-cyan-200"
     ];
     const colorClass = iconColors[index % 3];
 
@@ -40,7 +40,7 @@ export const Services: React.FC = () => {
             <Layers className="w-3.5 h-3.5" />
             <span>Services & Solutions</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-violet-500 via-pink-500 to-cyan-500 dark:from-blue-400 dark:via-violet-400 dark:via-pink-400 dark:to-cyan-400 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-violet-600 to-purple-600 dark:from-blue-400 dark:via-violet-400 dark:to-purple-400 tracking-tight drop-shadow-[0_0_15px_rgba(139,92,246,0.3)] dark:drop-shadow-[0_0_15px_rgba(139,92,246,0.5)]">
             How I Can Help Your Team
           </h2>
           <p className="mt-4 text-slate-600 dark:text-slate-400 max-w-2xl text-base">
@@ -53,15 +53,15 @@ export const Services: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, index) => {
             const cardGradients = [
-              "bg-gradient-to-br from-blue-500/20 via-violet-500/20 to-cyan-500/20 dark:from-blue-500/25 dark:via-violet-500/25 dark:to-cyan-500/25 hover:from-blue-500/30 hover:via-violet-500/30 hover:to-cyan-500/30 dark:hover:from-blue-500/35 dark:hover:via-violet-500/35 dark:hover:to-cyan-500/35 !shadow-[0_0_30px_rgba(59,130,246,0.2)] dark:!shadow-[0_0_30px_rgba(59,130,246,0.25)] hover:!shadow-[0_0_40px_rgba(59,130,246,0.4)] dark:hover:!shadow-[0_0_40px_rgba(59,130,246,0.5)] border-blue-400/40 dark:border-blue-500/40",
-              "bg-gradient-to-br from-violet-500/20 via-pink-500/20 to-blue-500/20 dark:from-violet-500/25 dark:via-pink-500/25 dark:to-blue-500/25 hover:from-violet-500/30 hover:via-pink-500/30 hover:to-blue-500/30 dark:hover:from-violet-500/35 dark:hover:via-pink-500/35 dark:hover:to-blue-500/35 !shadow-[0_0_30px_rgba(139,92,246,0.2)] dark:!shadow-[0_0_30px_rgba(139,92,246,0.25)] hover:!shadow-[0_0_40px_rgba(139,92,246,0.4)] dark:hover:!shadow-[0_0_40px_rgba(139,92,246,0.5)] border-violet-400/40 dark:border-violet-500/40",
-              "bg-gradient-to-br from-cyan-500/20 via-blue-500/20 to-violet-500/20 dark:from-cyan-500/25 dark:via-blue-500/25 dark:to-violet-500/25 hover:from-cyan-500/30 hover:via-blue-500/30 hover:to-violet-500/30 dark:hover:from-cyan-500/35 dark:hover:via-blue-500/35 dark:hover:to-violet-500/35 !shadow-[0_0_30px_rgba(6,182,212,0.2)] dark:!shadow-[0_0_30px_rgba(6,182,212,0.25)] hover:!shadow-[0_0_40px_rgba(6,182,212,0.4)] dark:hover:!shadow-[0_0_40px_rgba(6,182,212,0.5)] border-cyan-400/40 dark:border-cyan-500/40"
+              "!bg-gradient-to-br from-[#172554] via-[#2563EB] to-[#6D28D9] hover:from-[#1e3380] hover:via-[#3b82f6] hover:to-[#7c3aed] !shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:!shadow-[0_0_40px_rgba(37,99,235,0.6)] hover:-translate-y-1.5 border-white/10 backdrop-blur-md",
+              "!bg-gradient-to-br from-[#2E1065] via-[#7C3AED] to-[#DB2777] hover:from-[#3b1582] hover:via-[#8b5cf6] hover:to-[#ec4899] !shadow-[0_0_20px_rgba(124,58,237,0.3)] hover:!shadow-[0_0_40px_rgba(124,58,237,0.6)] hover:-translate-y-1.5 border-white/10 backdrop-blur-md",
+              "!bg-gradient-to-br from-[#083344] via-[#0891B2] to-[#4F46E5] hover:from-[#0b4861] hover:via-[#06b6d4] hover:to-[#6366f1] !shadow-[0_0_20px_rgba(8,145,178,0.3)] hover:!shadow-[0_0_40px_rgba(8,145,178,0.6)] hover:-translate-y-1.5 border-white/10 backdrop-blur-md"
             ];
             
             const checkColors = [
-              "text-blue-600 dark:text-blue-400",
-              "text-violet-600 dark:text-violet-400",
-              "text-cyan-600 dark:text-cyan-400"
+              "!text-blue-200",
+              "!text-pink-200",
+              "!text-cyan-200"
             ];
 
             const glowClass = cardGradients[index % 3];
@@ -74,26 +74,26 @@ export const Services: React.FC = () => {
               >
                 <div className="space-y-4">
                   {/* Icon Box */}
-                  <div className="w-14 h-14 rounded-2xl bg-white/60 dark:bg-slate-800/60 flex items-center justify-center group-hover:scale-105 transition-transform shadow-inner">
+                  <div className="w-14 h-14 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center group-hover:scale-105 transition-transform shadow-inner">
                     {getIcon(service.icon, index)}
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100 transition-colors">
+                  <h3 className="text-xl font-bold !text-white transition-colors">
                     {service.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed font-medium">
+                  <p className="text-xs sm:text-sm !text-slate-200 leading-relaxed font-medium">
                     {service.shortDesc}
                   </p>
 
                   {/* Deliverables List */}
-                  <div className="space-y-2 pt-2 border-t border-slate-300/50 dark:border-slate-600/50">
-                    <span className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                  <div className="space-y-2 pt-2 border-t border-white/20">
+                    <span className="text-xs font-bold !text-slate-300 uppercase tracking-wider">
                       Key Deliverables
                     </span>
                     <ul className="space-y-2">
                       {service.deliverables.map((del, dIdx) => (
                         <li
                           key={dIdx}
-                          className="flex items-center gap-2 text-xs sm:text-sm text-slate-800 dark:text-slate-200 font-medium"
+                          className="flex items-center gap-2 text-xs sm:text-sm !text-slate-200 font-medium"
                         >
                           <CheckCircle2 className={`w-4 h-4 shrink-0 ${checkColor}`} />
                           <span>{del}</span>
@@ -110,7 +110,7 @@ export const Services: React.FC = () => {
                   size="sm"
                   icon={<ArrowRight className="w-4 h-4 text-white" />}
                   iconPosition="right"
-                  className="w-full justify-between !bg-gradient-to-r !from-blue-900 !via-violet-900 !to-purple-900 hover:!from-blue-800 hover:!via-violet-800 hover:!to-purple-800 !text-white !border-0 shadow-[0_0_15px_rgba(59,130,246,0.5)] hover:shadow-[0_0_25px_rgba(139,92,246,0.8)] hover:-translate-y-1 transition-all duration-300 dark:!from-blue-950 dark:!via-violet-950 dark:!to-purple-950 dark:hover:!from-blue-900 dark:hover:!via-violet-900 dark:hover:!to-purple-900"
+                  className="w-full justify-between !bg-gradient-to-r !from-[#0B1120] !via-[#172033] !to-[#1e1b4b] hover:!from-[#0f172a] hover:!via-[#1e293b] hover:!to-[#312e81] !text-white !border border-white/10 shadow-[0_4px_15px_rgba(0,0,0,0.3)] hover:shadow-[0_0_20px_rgba(139,92,246,0.5)] hover:-translate-y-1 transition-all duration-300"
                 >
                   Inquire Service
                 </Button>
