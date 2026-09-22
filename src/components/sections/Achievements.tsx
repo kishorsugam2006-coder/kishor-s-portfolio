@@ -22,7 +22,10 @@ export const Achievements: React.FC = () => {
             </span>{" "}
             <span>Honors & Badges</span>{" "}
           </div>{" "}
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
+          <h2 
+            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight"
+            style={{ background: "linear-gradient(90deg, #2563eb 0%, #06b6d4 30%, #8b5cf6 65%, #ec4899 100%)", WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent" }}
+          >
             {" "}
             Key Achievements{" "}
           </h2>{" "}
@@ -37,7 +40,8 @@ export const Achievements: React.FC = () => {
           {achievements.map((ach) => (
             <div
               key={ach.id}
-              className="glass-panel card-glow p-8 rounded-3xl border border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 transition-all shadow-lg"
+              className="glass-panel card-glow p-8 rounded-3xl border border-slate-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 transition-all shadow-lg"
+              style={{ background: "linear-gradient(120deg, rgba(213,233,255,0.85) 0%, rgba(213,243,244,0.85) 25%, rgba(221,213,255,0.85) 55%, rgba(241,216,240,0.85) 80%, rgba(246,220,229,0.85) 100%)" }}
             >
               {" "}
               <div className="flex items-start gap-4">
@@ -53,21 +57,21 @@ export const Achievements: React.FC = () => {
                     <Badge variant="secondary" size="sm">
                       Silver Badge
                     </Badge>{" "}
-                    <span className="text-xs font-semibold text-slate-400">
+                    <span className="text-xs font-semibold text-slate-700">
                       {ach.organization}
                     </span>{" "}
                   </div>{" "}
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100">
+                  <h3 className="text-xl font-bold text-slate-900">
                     {" "}
                     {ach.title}{" "}
                   </h3>{" "}
-                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-800 leading-relaxed">
                     {" "}
                     {ach.details}{" "}
                   </p>{" "}
                 </div>{" "}
               </div>{" "}
-              <div className="flex items-center gap-1 text-amber-500 font-bold text-sm bg-amber-500/10 px-4 py-2 rounded-xl border border-amber-500/20 shrink-0 self-start sm:self-center">
+              <div className="flex items-center gap-1 text-amber-600 font-bold text-sm bg-amber-500/15 px-4 py-2 rounded-xl border border-amber-500/30 shrink-0 self-start sm:self-center shadow-sm">
                 {" "}
                 <Star className="w-4 h-4 fill-amber-500" />{" "}
                 <span>NPTEL Award</span>{" "}
