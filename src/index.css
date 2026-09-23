@@ -499,29 +499,29 @@ button:active, a:active {
 }
 
 .btn-project-details {
-  background: linear-gradient(90deg, #3B82F6, #8B5CF6, #EC4899, #F59E0B);
+  background: linear-gradient(90deg, #2563EB 0%, #4F46E5 50%, #7C3AED 100%);
   background-size: 200% 100%;
   color: #ffffff !important;
   border: none;
-  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.25);
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.15);
   transition: all 0.3s ease;
   font-weight: 600;
 }
 
 .btn-project-details:hover {
   background-position: 100% 0;
-  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.45);
+  box-shadow: 0 8px 24px rgba(124, 58, 237, 0.25);
   filter: brightness(1.1);
 }
 
 .dark .btn-project-details {
-  background: linear-gradient(90deg, #3B82F6, #A78BFA, #F472B6, #FBBF24);
+  background: linear-gradient(90deg, #2563EB 0%, #4F46E5 50%, #7C3AED 100%);
   background-size: 200% 100%;
-  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.35);
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.25);
 }
 
 .dark .btn-project-details:hover {
-  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.55);
+  box-shadow: 0 8px 24px rgba(124, 58, 237, 0.35);
 }
 
 /* Accessible focus ring */
