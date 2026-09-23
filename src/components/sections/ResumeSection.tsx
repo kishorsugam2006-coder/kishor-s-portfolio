@@ -70,7 +70,7 @@ export const ResumeSection: React.FC = () => {
               href={personalInfo.resumeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              variant="outline"
+              variant="printView"
               size="md"
               icon={<Printer className="w-4 h-4" />}
             >
