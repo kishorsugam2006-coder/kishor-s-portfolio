@@ -59,7 +59,7 @@ export const ResumeSection: React.FC = () => {
               download="Kishor_S_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              variant="primary"
+              variant="resumeDownload"
               size="md"
               icon={<Download className="w-4 h-4" />}
             >
