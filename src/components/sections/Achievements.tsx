@@ -40,12 +40,12 @@ export const Achievements: React.FC = () => {
           {achievements.map((ach) => (
             <div
               key={ach.id}
-              className="glass-panel card-glow p-8 rounded-3xl border border-slate-200/60 dark:border-indigo-500/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 transition-all shadow-[0_0_15px_rgba(221,214,254,0.4)] hover:shadow-[0_0_25px_rgba(233,213,255,0.6)] dark:shadow-[0_0_15px_rgba(49,46,129,0.4)] dark:hover:shadow-[0_0_25px_rgba(76,29,79,0.6)] hover:-translate-y-1 bg-[linear-gradient(135deg,#DBEAFE_0%,#CFFAFE_25%,#DDD6FE_50%,#E9D5FF_75%,#FCE7F3_100%)] dark:bg-[linear-gradient(135deg,#0F172A_0%,#083344_25%,#1E1B4B_50%,#312E81_75%,#4C1D4F_100%)]"
+              className="glass-panel p-8 rounded-3xl border border-slate-200/60 dark:border-indigo-500/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 transition-all shadow-[0_0_15px_rgba(221,214,254,0.4)] hover:shadow-[0_0_25px_rgba(233,213,255,0.6)] dark:shadow-[0_0_15px_rgba(49,46,129,0.4)] dark:hover:shadow-[0_0_25px_rgba(76,29,79,0.6)] hover:-translate-y-1 !bg-[linear-gradient(135deg,#BFDBFE_0%,#A5F3FC_25%,#C4B5FD_50%,#D8B4FE_75%,#F9A8D4_100%)] dark:!bg-[linear-gradient(135deg,#0F172A_0%,#083344_25%,#1E1B4B_50%,#312E81_75%,#4C1D4F_100%)]"
             >
               {" "}
               <div className="flex items-start gap-4">
                 {" "}
-                <div className="w-14 h-14 rounded-2xl bg-amber-500/10 dark:bg-[rgba(245,158,11,0.12)] text-amber-500 dark:text-amber-400 flex items-center justify-center shrink-0 border border-transparent dark:border-[rgba(245,158,11,0.25)] dark:shadow-[0_0_10px_rgba(245,158,11,0.2)]">
+                <div className="w-14 h-14 rounded-2xl bg-amber-500/10 dark:bg-amber-500/20 text-[#D97706] dark:text-[#FBBF24] flex items-center justify-center shrink-0 border border-amber-500/20 dark:border-amber-500/30 dark:shadow-[0_0_10px_rgba(251,191,36,0.2)]">
                   {" "}
                   <ShieldCheck className="w-8 h-8" />{" "}
                 </div>{" "}
@@ -54,25 +54,25 @@ export const Achievements: React.FC = () => {
                   <div className="flex items-center gap-2">
                     {" "}
                     <Badge variant="secondary" size="sm" className="!bg-amber-500/10 dark:!bg-amber-500/20 !border-amber-500/20 dark:!border-amber-500/30">
-                      <span className="text-amber-600 dark:text-amber-400">Silver Badge</span>
+                      <span className="text-[#D97706] dark:text-[#FBBF24]">Silver Badge</span>
                     </Badge>{" "}
-                    <span className="text-xs font-semibold text-slate-700 dark:text-slate-300">
+                    <span className="text-xs font-semibold text-[#334155] dark:text-[#CBD5E1]">
                       {ach.organization}
                     </span>{" "}
                   </div>{" "}
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-slate-50">
+                  <h3 className="text-xl font-bold text-[#0F172A] dark:text-[#F8FAFC]">
                     {" "}
                     {ach.title}{" "}
                   </h3>{" "}
-                  <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-[#334155] dark:text-[#CBD5E1] leading-relaxed">
                     {" "}
                     {ach.details}{" "}
                   </p>{" "}
                 </div>{" "}
               </div>{" "}
-              <div className="flex items-center gap-1 text-amber-300 font-bold text-sm bg-gradient-to-r from-orange-700 to-amber-600 px-4 py-2 rounded-xl border border-amber-500/40 shrink-0 self-start sm:self-center shadow-[0_0_10px_rgba(251,191,36,0.3)]">
+              <div className="flex items-center gap-1 font-bold text-sm bg-gradient-to-r from-amber-100 to-orange-100 text-[#C2410C] border border-amber-300 dark:from-orange-900 dark:to-amber-900 dark:text-[#FBBF24] dark:border-amber-500/40 px-4 py-2 rounded-xl shrink-0 self-start sm:self-center shadow-[0_0_10px_rgba(251,191,36,0.2)] dark:shadow-[0_0_10px_rgba(251,191,36,0.3)]">
                 {" "}
-                <Star className="w-4 h-4 fill-amber-300" />{" "}
+                <Star className="w-4 h-4 fill-[#C2410C] dark:fill-[#FBBF24]" />{" "}
                 <span>NPTEL Award</span>{" "}
               </div>{" "}
             </div>
