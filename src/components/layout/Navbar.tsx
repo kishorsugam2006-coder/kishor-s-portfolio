@@ -51,11 +51,11 @@ export const Navbar: React.FC = () => {
         >
           {" "}
             <img
-              src="/logo.jpeg"
-              alt="Kishor S Logo"
-              className="w-10 h-10 rounded-xl object-cover shadow-sm group-hover:scale-105 transition-transform"
+              src="/assets/sk-logo-transparent.png"
+              alt="SK Logo"
+              className="navbar-logo w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 object-contain transition-all duration-300"
             />
-          <div className="flex flex-col">
+          <div className="flex flex-col ml-1">
             {" "}
             <span className="font-bold text-slate-900 dark:text-slate-100 group-hover:text-[var(--hover-text)] transition-colors">
               {" "}
