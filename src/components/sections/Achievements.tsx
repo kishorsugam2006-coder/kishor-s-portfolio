@@ -70,9 +70,9 @@ export const Achievements: React.FC = () => {
                   </p>{" "}
                 </div>{" "}
               </div>{" "}
-              <div className="flex items-center gap-1 text-amber-600 dark:text-amber-400 font-bold text-sm bg-amber-500/15 dark:bg-[linear-gradient(90deg,#78350F_0%,#92400E_100%)] px-4 py-2 rounded-xl border border-amber-500/30 dark:border-[rgba(251,191,36,0.45)] shrink-0 self-start sm:self-center shadow-sm dark:shadow-[0_0_10px_rgba(251,191,36,0.2)]">
+              <div className="flex items-center gap-1 text-amber-300 font-bold text-sm bg-gradient-to-r from-orange-700 to-amber-600 px-4 py-2 rounded-xl border border-amber-500/40 shrink-0 self-start sm:self-center shadow-[0_0_10px_rgba(251,191,36,0.3)]">
                 {" "}
-                <Star className="w-4 h-4 fill-amber-500 dark:fill-amber-400" />{" "}
+                <Star className="w-4 h-4 fill-amber-300" />{" "}
                 <span>NPTEL Award</span>{" "}
               </div>{" "}
             </div>
