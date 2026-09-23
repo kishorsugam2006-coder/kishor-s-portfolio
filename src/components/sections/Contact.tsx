@@ -118,73 +118,73 @@ export const Contact: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           
           {/* Direct Contact Info Sidebar */}
-          <div className="lg:col-span-5 space-y-8 p-8 rounded-3xl border border-[rgba(99,102,241,0.15)] shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 !bg-[linear-gradient(135deg,#DCEEFF_0%,#E7E2FF_55%,#DDF5F5_100%)] hover:!bg-[linear-gradient(135deg,#cbe6ff_0%,#dcd4ff_55%,#cbf0f0_100%)]">
-            <h3 className="text-2xl font-bold !text-[#172033]">
+          <div className="lg:col-span-5 space-y-8 p-8 rounded-3xl border border-[rgba(99,102,241,0.15)] shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 !bg-[linear-gradient(135deg,#BFDBFE_0%,#C4B5FD_50%,#A5F3FC_100%)] dark:!bg-[linear-gradient(135deg,#0B1120_0%,#083344_50%,#312E81_100%)] hover:shadow-[0_10px_30px_rgba(59,130,246,0.3)] dark:hover:shadow-[0_10px_30px_rgba(49,46,129,0.5)]">
+            <h3 className="text-2xl font-bold !text-[#0F172A] dark:!text-[#F8FAFC]">
               Contact Details
             </h3>
 
-            <p className="text-sm !text-[#334155] leading-relaxed">
+            <p className="text-sm !text-[#334155] dark:!text-[#CBD5E1] leading-relaxed">
               Available for full-stack internships, web development projects, and entry-level IT roles.
             </p>
 
             <div className="space-y-4">
               {/* Email Card */}
-              <div className="p-4 rounded-2xl bg-[rgba(255,255,255,0.35)] shadow-sm flex items-center justify-between gap-4">
+              <div className="p-4 rounded-2xl bg-[rgba(255,255,255,0.35)] dark:bg-[rgba(0,0,0,0.25)] shadow-sm flex items-center justify-between gap-4">
                 <div className="flex items-center gap-3">
-                  <div className="p-2.5 rounded-xl bg-[rgba(255,255,255,0.5)] !text-[#2563EB]">
+                  <div className="p-2.5 rounded-xl bg-[rgba(255,255,255,0.5)] dark:bg-[rgba(255,255,255,0.1)] !text-[#2563EB] dark:!text-[#38BDF8]">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
-                    <div className="text-xs font-bold !text-[#475569] uppercase tracking-wider">Email</div>
-                    <div className="text-sm font-semibold !text-[#172033]">{personalInfo.email}</div>
+                    <div className="text-xs font-bold !text-[#334155] dark:!text-[#CBD5E1] uppercase tracking-wider">Email</div>
+                    <div className="text-sm font-semibold !text-[#0F172A] dark:!text-[#F8FAFC]">{personalInfo.email}</div>
                   </div>
                 </div>
 
                 <button
                   onClick={copyEmailToClipboard}
                   aria-label="Copy email address"
-                  className="p-2 rounded-xl border border-[rgba(99,102,241,0.18)] hover:bg-[rgba(255,255,255,0.6)] !text-[#334155] transition-colors"
+                  className="p-2 rounded-xl border border-[rgba(99,102,241,0.18)] dark:border-[rgba(255,255,255,0.1)] hover:bg-[rgba(255,255,255,0.6)] dark:hover:bg-[rgba(255,255,255,0.15)] !text-[#334155] dark:!text-[#CBD5E1] transition-colors"
                 >
-                  {copiedEmail ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4" />}
+                  {copiedEmail ? <Check className="w-4 h-4 text-emerald-600 dark:text-emerald-400" /> : <Copy className="w-4 h-4" />}
                 </button>
               </div>
 
               {/* Phone Card */}
-              <div className="p-4 rounded-2xl bg-[rgba(255,255,255,0.35)] shadow-sm flex items-center gap-3">
-                <div className="p-2.5 rounded-xl bg-[rgba(255,255,255,0.5)] !text-[#0891B2]">
+              <div className="p-4 rounded-2xl bg-[rgba(255,255,255,0.35)] dark:bg-[rgba(0,0,0,0.25)] shadow-sm flex items-center gap-3">
+                <div className="p-2.5 rounded-xl bg-[rgba(255,255,255,0.5)] dark:bg-[rgba(255,255,255,0.1)] !text-[#0891B2] dark:!text-[#22D3EE]">
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
-                  <div className="text-xs font-bold !text-[#475569] uppercase tracking-wider">Phone</div>
-                  <div className="text-sm font-semibold !text-[#172033]">{personalInfo.phone}</div>
+                  <div className="text-xs font-bold !text-[#334155] dark:!text-[#CBD5E1] uppercase tracking-wider">Phone</div>
+                  <div className="text-sm font-semibold !text-[#0F172A] dark:!text-[#F8FAFC]">{personalInfo.phone}</div>
                 </div>
               </div>
 
               {/* Location Card */}
-              <div className="p-4 rounded-2xl bg-[rgba(255,255,255,0.35)] shadow-sm flex items-center gap-3">
-                <div className="p-2.5 rounded-xl bg-[rgba(255,255,255,0.5)] !text-[#7C3AED]">
+              <div className="p-4 rounded-2xl bg-[rgba(255,255,255,0.35)] dark:bg-[rgba(0,0,0,0.25)] shadow-sm flex items-center gap-3">
+                <div className="p-2.5 rounded-xl bg-[rgba(255,255,255,0.5)] dark:bg-[rgba(255,255,255,0.1)] !text-[#7C3AED] dark:!text-[#A855F7]">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <div className="text-xs font-bold !text-[#475569] uppercase tracking-wider">Location</div>
-                  <div className="text-sm font-semibold !text-[#172033]">{personalInfo.location}</div>
+                  <div className="text-xs font-bold !text-[#334155] dark:!text-[#CBD5E1] uppercase tracking-wider">Location</div>
+                  <div className="text-sm font-semibold !text-[#0F172A] dark:!text-[#F8FAFC]">{personalInfo.location}</div>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Form */}
-          <div className="lg:col-span-7 p-8 sm:p-10 rounded-3xl border border-[rgba(99,102,241,0.15)] shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 !bg-[linear-gradient(135deg,#E8E1FF_0%,#F4DFF0_55%,#DDEBFF_100%)] hover:!bg-[linear-gradient(135deg,#ded4ff_0%,#f0cce9_55%,#cce0ff_100%)]">
+          <div className="lg:col-span-7 p-8 sm:p-10 rounded-3xl border border-[rgba(99,102,241,0.15)] shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 !bg-[linear-gradient(135deg,#DDD6FE_0%,#F9A8D4_50%,#BFDBFE_100%)] dark:!bg-[linear-gradient(135deg,#1E1B4B_0%,#4C1D4F_50%,#172554_100%)] hover:shadow-[0_10px_30px_rgba(139,92,246,0.3)] dark:hover:shadow-[0_10px_30px_rgba(76,29,79,0.5)]">
             {isSubmitted ? (
               <div className="text-center py-12 space-y-4 animate-in zoom-in-95 duration-300">
-                <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto shadow-sm">
+                <div className="w-16 h-16 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mx-auto shadow-sm">
                   <Check className="w-8 h-8" />
                 </div>
-                <h3 className="text-2xl font-bold !text-[#172033]">Message Received!</h3>
-                <p className="!text-[#334155] max-w-md mx-auto text-sm">
+                <h3 className="text-2xl font-bold !text-[#0F172A] dark:!text-[#F8FAFC]">Message Received!</h3>
+                <p className="!text-[#334155] dark:!text-[#CBD5E1] max-w-md mx-auto text-sm">
                   Thank you for reaching out. I will respond to your query promptly.
                 </p>
-                <Button onClick={() => setIsSubmitted(false)} variant="outline" size="sm" className="bg-white/50 hover:bg-white border-[rgba(99,102,241,0.18)] !text-[#172033]">
+                <Button onClick={() => setIsSubmitted(false)} variant="outline" size="sm" className="bg-white/50 dark:bg-black/20 hover:bg-white dark:hover:bg-black/40 border-[rgba(99,102,241,0.18)] dark:border-white/10 !text-[#0F172A] dark:!text-[#F8FAFC]">
                   Send Another Message
                 </Button>
               </div>
@@ -193,7 +193,7 @@ export const Contact: React.FC = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   {/* Name */}
                   <div className="space-y-2">
-                    <label htmlFor="contact-name" className="text-xs font-bold !text-[#475569] uppercase tracking-wider">
+                    <label htmlFor="contact-name" className="text-xs font-bold !text-[#334155] dark:!text-[#CBD5E1] uppercase tracking-wider">
                       Your Name *
                     </label>
                     <input
@@ -204,16 +204,16 @@ export const Contact: React.FC = () => {
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       aria-invalid={!!errors.name}
                       aria-describedby={errors.name ? 'contact-name-error' : undefined}
-                      className={`w-full px-4 py-3 text-sm rounded-2xl bg-[rgba(255,255,255,0.65)] border ${
-                        errors.name ? 'border-rose-400' : '!border-[rgba(99,102,241,0.18)]'
-                      } !text-[#172033] placeholder:text-[#475569]/60 focus:outline-none focus:ring-2 focus:ring-[#7C3AED]/30 focus:!border-[#2563EB] transition-colors`}
+                      className={`w-full px-4 py-3 text-sm rounded-2xl bg-[rgba(255,255,255,0.55)] dark:bg-[rgba(15,23,42,0.65)] border ${
+                        errors.name ? 'border-rose-400 dark:border-rose-500' : 'border-[rgba(99,102,241,0.25)] dark:border-[rgba(129,140,248,0.35)]'
+                      } !text-[#0F172A] dark:!text-[#F8FAFC] placeholder:text-[#64748B] dark:placeholder:text-[#94A3B8] focus:outline-none focus:ring-2 focus:ring-[#7C3AED]/30 focus:border-[#2563EB] dark:focus:border-[#818CF8] transition-colors`}
                     />
-                    {errors.name && <span id="contact-name-error" className="text-xs text-rose-500">{errors.name}</span>}
+                    {errors.name && <span id="contact-name-error" className="text-xs text-rose-500 dark:text-rose-400">{errors.name}</span>}
                   </div>
 
                   {/* Email */}
                   <div className="space-y-2">
-                    <label htmlFor="contact-email" className="text-xs font-bold !text-[#475569] uppercase tracking-wider">
+                    <label htmlFor="contact-email" className="text-xs font-bold !text-[#334155] dark:!text-[#CBD5E1] uppercase tracking-wider">
                       Your Email *
                     </label>
                     <input
@@ -224,17 +224,17 @@ export const Contact: React.FC = () => {
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       aria-invalid={!!errors.email}
                       aria-describedby={errors.email ? 'contact-email-error' : undefined}
-                      className={`w-full px-4 py-3 text-sm rounded-2xl bg-[rgba(255,255,255,0.65)] border ${
-                        errors.email ? 'border-rose-400' : '!border-[rgba(99,102,241,0.18)]'
-                      } !text-[#172033] placeholder:text-[#475569]/60 focus:outline-none focus:ring-2 focus:ring-[#7C3AED]/30 focus:!border-[#2563EB] transition-colors`}
+                      className={`w-full px-4 py-3 text-sm rounded-2xl bg-[rgba(255,255,255,0.55)] dark:bg-[rgba(15,23,42,0.65)] border ${
+                        errors.email ? 'border-rose-400 dark:border-rose-500' : 'border-[rgba(99,102,241,0.25)] dark:border-[rgba(129,140,248,0.35)]'
+                      } !text-[#0F172A] dark:!text-[#F8FAFC] placeholder:text-[#64748B] dark:placeholder:text-[#94A3B8] focus:outline-none focus:ring-2 focus:ring-[#7C3AED]/30 focus:border-[#2563EB] dark:focus:border-[#818CF8] transition-colors`}
                     />
-                    {errors.email && <span id="contact-email-error" className="text-xs text-rose-500">{errors.email}</span>}
+                    {errors.email && <span id="contact-email-error" className="text-xs text-rose-500 dark:text-rose-400">{errors.email}</span>}
                   </div>
                 </div>
 
                 {/* Subject */}
                 <div className="space-y-2">
-                  <label htmlFor="contact-subject" className="text-xs font-bold !text-[#475569] uppercase tracking-wider">
+                  <label htmlFor="contact-subject" className="text-xs font-bold !text-[#334155] dark:!text-[#CBD5E1] uppercase tracking-wider">
                     Subject
                   </label>
                   <input
@@ -243,13 +243,13 @@ export const Contact: React.FC = () => {
                     placeholder="e.g. IT Internship Opportunity"
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                    className="w-full px-4 py-3 text-sm rounded-2xl bg-[rgba(255,255,255,0.65)] border !border-[rgba(99,102,241,0.18)] !text-[#172033] placeholder:text-[#475569]/60 focus:outline-none focus:ring-2 focus:ring-[#7C3AED]/30 focus:!border-[#2563EB] transition-colors"
+                    className="w-full px-4 py-3 text-sm rounded-2xl bg-[rgba(255,255,255,0.55)] dark:bg-[rgba(15,23,42,0.65)] border border-[rgba(99,102,241,0.25)] dark:border-[rgba(129,140,248,0.35)] !text-[#0F172A] dark:!text-[#F8FAFC] placeholder:text-[#64748B] dark:placeholder:text-[#94A3B8] focus:outline-none focus:ring-2 focus:ring-[#7C3AED]/30 focus:border-[#2563EB] dark:focus:border-[#818CF8] transition-colors"
                   />
                 </div>
 
                 {/* Message */}
                 <div className="space-y-2">
-                  <label htmlFor="contact-message" className="text-xs font-bold !text-[#475569] uppercase tracking-wider">
+                  <label htmlFor="contact-message" className="text-xs font-bold !text-[#334155] dark:!text-[#CBD5E1] uppercase tracking-wider">
                     Your Message *
                   </label>
                   <textarea
@@ -260,11 +260,11 @@ export const Contact: React.FC = () => {
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     aria-invalid={!!errors.message}
                     aria-describedby={errors.message ? 'contact-message-error' : undefined}
-                    className={`w-full px-4 py-3 text-sm rounded-2xl bg-[rgba(255,255,255,0.65)] border ${
-                      errors.message ? 'border-rose-400' : '!border-[rgba(99,102,241,0.18)]'
-                    } !text-[#172033] placeholder:text-[#475569]/60 focus:outline-none focus:ring-2 focus:ring-[#7C3AED]/30 focus:!border-[#2563EB] resize-none transition-colors`}
+                    className={`w-full px-4 py-3 text-sm rounded-2xl bg-[rgba(255,255,255,0.55)] dark:bg-[rgba(15,23,42,0.65)] border ${
+                      errors.message ? 'border-rose-400 dark:border-rose-500' : 'border-[rgba(99,102,241,0.25)] dark:border-[rgba(129,140,248,0.35)]'
+                    } !text-[#0F172A] dark:!text-[#F8FAFC] placeholder:text-[#64748B] dark:placeholder:text-[#94A3B8] focus:outline-none focus:ring-2 focus:ring-[#7C3AED]/30 focus:border-[#2563EB] dark:focus:border-[#818CF8] resize-none transition-colors`}
                   />
-                  {errors.message && <span id="contact-message-error" className="text-xs text-rose-500">{errors.message}</span>}
+                  {errors.message && <span id="contact-message-error" className="text-xs text-rose-500 dark:text-rose-400">{errors.message}</span>}
                 </div>
 
                 <div className="hidden" aria-hidden="true">
