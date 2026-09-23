@@ -40,7 +40,7 @@ export const Achievements: React.FC = () => {
           {achievements.map((ach) => (
             <div
               key={ach.id}
-              className="glass-panel card-glow p-8 rounded-3xl border border-slate-200 dark:border-indigo-500/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 transition-all shadow-lg hover:shadow-xl dark:shadow-[0_0_15px_rgba(79,70,229,0.15)] bg-[linear-gradient(120deg,rgba(213,233,255,0.85)_0%,rgba(213,243,244,0.85)_25%,rgba(221,213,255,0.85)_55%,rgba(241,216,240,0.85)_80%,rgba(246,220,229,0.85)_100%)] dark:bg-[linear-gradient(120deg,#0F172A_0%,#1E1B4B_50%,#312E81_100%)]"
+              className="glass-panel card-glow p-8 rounded-3xl border border-slate-200/60 dark:border-indigo-500/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 transition-all shadow-[0_0_15px_rgba(221,214,254,0.4)] hover:shadow-[0_0_25px_rgba(233,213,255,0.6)] dark:shadow-[0_0_15px_rgba(49,46,129,0.4)] dark:hover:shadow-[0_0_25px_rgba(76,29,79,0.6)] hover:-translate-y-1 bg-[linear-gradient(135deg,#DBEAFE_0%,#CFFAFE_25%,#DDD6FE_50%,#E9D5FF_75%,#FCE7F3_100%)] dark:bg-[linear-gradient(135deg,#0F172A_0%,#083344_25%,#1E1B4B_50%,#312E81_75%,#4C1D4F_100%)]"
             >
               {" "}
               <div className="flex items-start gap-4">
@@ -64,7 +64,7 @@ export const Achievements: React.FC = () => {
                     {" "}
                     {ach.title}{" "}
                   </h3>{" "}
-                  <p className="text-xs sm:text-sm text-slate-800 dark:text-slate-300 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
                     {" "}
                     {ach.details}{" "}
                   </p>{" "}
