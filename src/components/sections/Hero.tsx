@@ -190,7 +190,7 @@ export const Hero: React.FC = () => {
               {/* Subtle ambient glow behind photo */}{" "}
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-blue-600 to-cyan-500 rotate-3 opacity-25 blur-xl group-hover:opacity-40 transition-opacity duration-300" />{" "}
               {/* Photo 1 Container */}{" "}
-              <div className="relative w-full h-full rounded-3xl overflow-hidden glass-panel border-2 border-[var(--border-color)] shadow-2xl p-2.5 transition-transform duration-300 ">
+              <div className="relative w-full h-full rounded-3xl overflow-hidden profile-image-card p-2.5">
                 {" "}
                 <img
                   src={personalInfo.avatarUrl}
