@@ -51,7 +51,7 @@ export const Navbar: React.FC = () => {
         {/* Brand Logo */}
         <a
           href="#hero"
-          className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-lg p-1"
+          className="navbar-brand flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
         >
           <img
             src="/assets/sk-logo-transparent.png"
@@ -59,10 +59,10 @@ export const Navbar: React.FC = () => {
             className="navbar-logo w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 object-contain transition-all duration-300"
           />
           <div className="flex flex-col ml-1">
-            <span className="font-bold text-slate-900 dark:text-slate-100 group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors">
+            <span className="navbar-brand-name font-bold tracking-tight transition-colors">
               KISHOR S
             </span>
-            <span className="text-xs text-slate-500 dark:text-slate-400 font-medium">
+            <span className="navbar-brand-subtitle text-xs font-medium transition-colors">
               {professionalPositioning.primaryRole}
             </span>
           </div>
