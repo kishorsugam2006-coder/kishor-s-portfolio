@@ -92,7 +92,7 @@ export const Hero: React.FC = () => {
                 download="Kishor_S_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                variant="outline"
+                variant="heroResume"
                 size="lg"
                 icon={<Download className="w-5 h-5" />}
               >
@@ -101,7 +101,7 @@ export const Hero: React.FC = () => {
               </Button>{" "}
               <Button
                 href="#contact"
-                variant="ghost"
+                variant="heroContact"
                 size="lg"
                 icon={<Mail className="w-5 h-5" />}
               >

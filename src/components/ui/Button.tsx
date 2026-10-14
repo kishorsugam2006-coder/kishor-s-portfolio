@@ -1,6 +1,6 @@
 import React from "react";
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary" | "outline" | "ghost" | "explosive" | "projectDetails" | "resumeDownload" | "printView";
+  variant?: "primary" | "secondary" | "outline" | "ghost" | "explosive" | "projectDetails" | "resumeDownload" | "printView" | "heroResume" | "heroContact";
   size?: "sm" | "md" | "lg";
   icon?: React.ReactNode;
   iconPosition?: "left" | "right";
@@ -43,6 +43,8 @@ export const Button: React.FC<ButtonProps> = ({
     projectDetails: "btn-project-details",
     resumeDownload: "btn-resume-download",
     printView: "btn-resume-download",
+    heroResume: "btn-hero-resume",
+    heroContact: "btn-hero-contact",
   };
   const combinedClasses = `inline-flex items-center justify-center gap-2 cursor-pointer transition-all ${sizeClasses[size]} ${variantClasses[variant]} ${className}`;
   if (href) {
